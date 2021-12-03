@@ -1,0 +1,27 @@
+.input-container {
+  --background: transparent;
+  --border-style: none;
+
+  ion-input {
+    font-size: 11px;
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 15px;
+    height: 40px;
+    letter-spacing: 0.5px;
+    --padding-start: 20px;
+    --placeholder-color: gray;
+    --placeholder-opacity: 0.8;
+    --background: white;
+  }
+
+  ion-text {
+    h1 {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+      margin-left: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #3e6167;
+    }
+  }
+}

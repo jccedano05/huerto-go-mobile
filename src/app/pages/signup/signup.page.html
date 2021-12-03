@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row class="div-top">
+      <ion-col size="1"> </ion-col>
+      <ion-col size="2">
+        <ion-img
+          src="/assets/huertoGo/ANDROID/002_Ingresa/001_icon_logo.svg"
+          style="width: 50px; height: 77px"
+        ></ion-img>
+      </ion-col>
+      <ion-col size="8.5" class="text-separation">
+        <ion-text color="dark">
+          <h2>Bienvenido</h2>
+          <h3>
+            Para iniciar a comprar<br />
+            crea tu cuenta
+          </h3>
+        </ion-text>
+      </ion-col>
+      <ion-col size="12">
+        <ion-row>
+          <ion-col size="8.5">
+            <ion-text class="ion-text-center">
+              <h5>Puedes crear una cuenta con:</h5>
+            </ion-text>
+          </ion-col>
+          <ion-col size="1.75">
+            <ion-img
+              src="/assets/huertoGo/ANDROID/004_Registro/002_btn_Facebook1.svg"
+              style="width: 36px; height: 31px"
+            ></ion-img>
+          </ion-col>
+          <ion-col size="1.75">
+            <ion-img
+              src="/assets/huertoGo/ANDROID/004_Registro/001_btn_Google1.svg"
+              style="width: 36px; height: 31px"
+            ></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="div-middle">
+      <app-input
+        placeholder="ej.soyyo@unacuenta.com"
+        type="text"
+        labelText="Tu correo electronico"
+      ></app-input>
+      <app-input
+        placeholder="ej.Una23por/"
+        type="password"
+        labelText="Contraseña con 8 caracteres Alfanumericos"
+      ></app-input>
+      <app-input
+        placeholder=""
+        type="password"
+        labelText="Confirmar Contraseña"
+      ></app-input>
+    </ion-row>
+
+    <ion-row class="div-bottom">
+      <app-input
+        placeholder="ej. +52 33 - 0000 - 0000"
+        type="text"
+        labelText="Telefono"
+      ></app-input>
+      <ion-button
+        expand="block"
+        shape="round"
+        color="57b41b"
+        class="aceptarButton buttons"
+      >
+        Confirmar
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,32 @@
+ion-grid {
+  padding-top: 30%;
+  //   padding-bottom: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img-disp {
+    flex: 49%;
+    padding-top: 12%;
+  }
+  .main-text-disp {
+    flex: 49%;
+  }
+  .version-text {
+    flex: 2%;
+    color: rgb(200, 200, 200);
+  }
+}
+
+ion-text {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #3b5e64;
+}
+
+.welcome-text-height {
+  line-height: 2em;
+  padding-bottom: 10%;
+}
