@@ -1,0 +1,65 @@
+<ion-card-content
+  class="modalClosed"
+  *ngIf="!isOpenDetailProduct; else favoriteExpression"
+>
+  <div class="seccion">{{ subtitle }}</div>
+  <div class="unidad">{{ unit }}</div>
+  <div class="precio">${{ price }} M.N.</div>
+  <ion-button (click)="onClick()" fill="clear" size="small">
+    <img
+      src="/assets/huertoGo/ANDROID/006_Inicio/005_btn_agregar1.svg"
+      height="60%"
+      alt="FavButton"
+    />
+  </ion-button>
+</ion-card-content>
+
+<!-- Open Modal Details -->
+<ng-template #favoriteExpression>
+  <ion-card-content class="isOpenModal" style="background-color: #425f65">
+    <div class="addRestProduct">
+      <ion-button (click)="onClick()" fill="clear">
+        <img
+          src="/assets/huertoGo/ANDROID/006_Inicio/014_btn_trash.svg"
+          height="100%"
+          alt="FavButton"
+        />
+      </ion-button>
+    </div>
+
+    <div class="addRestProduct">
+      <ion-button (click)="onClick()" fill="clear">
+        <img
+          src="/assets/huertoGo/ANDROID/006_Inicio/011_bt_menos.svg"
+          height="100%"
+          alt="FavButton"
+        />
+      </ion-button>
+      <h2>8Kg</h2>
+      <ion-button (click)="onClick()" fill="clear">
+        <img
+          src="/assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+          height="100%"
+          alt="FavButton"
+        />
+      </ion-button>
+    </div>
+
+    <div class="addRestProduct pieceWheight">
+      <ion-button (click)="onClick()" fill="clear">
+        <img
+          src="/assets/huertoGo/ANDROID/006_Inicio/013_btn_pieza2.svg"
+          height="200%"
+          alt="FavButton"
+        />
+      </ion-button>
+      <ion-button (click)="onClick()" fill="clear">
+        <img
+          src="/assets/huertoGo/ANDROID/006_Inicio/013_btn_peso1.svg"
+          height="200%"
+          alt="FavButton"
+        />
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ng-template>

@@ -10,6 +10,7 @@ export class InputComponent {
   @Input() type: string;
   @Input() placeholder: string;
   @Input() labelText: string;
+  @Input() required: string;
 
   constructor() { }
 

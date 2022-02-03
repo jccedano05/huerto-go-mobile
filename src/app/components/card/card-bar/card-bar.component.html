@@ -1,0 +1,18 @@
+<div class="container">
+  <ion-label>{{ discount }}%</ion-label>
+  <ion-button (click)="onClick()" fill="clear" size="small">
+    <img
+      *ngIf="!isFavorite; else favoriteExpression"
+      src="/assets/huertoGo/WEB/005_Inicio/008_Btn_Like1.svg"
+      height="60%"
+      alt="FavButton"
+    />
+    <ng-template #favoriteExpression>
+      <img
+        src="/assets/huertoGo/WEB/005_Inicio/009_Btn_Like2.svg"
+        height="60%"
+        alt="FavButton"
+      />
+    </ng-template>
+  </ion-button>
+</div>

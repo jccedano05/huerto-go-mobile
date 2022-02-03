@@ -1,0 +1,60 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 18px;
+    padding-right: 10px;
+
+    h1 {
+      font-size: 18.5pt; //18.5pt
+      font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: #ff9045;
+    }
+  }
+  .text-secondary {
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13.5pt; //13.5pt
+    font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    color: #425f66;
+  }
+}
+
+#form {
+  padding-top: 260px; //cambiar a % ****
+
+  ion-button {
+    margin-top: 20px;
+    height: 43px;
+    width: 85%;
+    font-size: 13.5pt; //13.5pt
+    text-transform: initial;
+    border-radius: 15px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    --box-shadow: none;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aceptarButton {
+    background-color: #57b41b !important;
+  }
+}
+
+app-input {
+  width: 89%;
+}

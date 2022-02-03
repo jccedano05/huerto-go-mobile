@@ -22,6 +22,26 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'signup-form',
+    loadChildren: () => import('./pages/signup-form/signup-form.module').then( m => m.SignupFormPageModule)
+  },
+  {
+    path: 'prueba',
+    loadChildren: () => import('./pages/prueba/prueba.module').then( m => m.PruebaPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'start-page',
+    loadChildren: () => import('./pages/start-page/start-page.module').then( m => m.StartPagePageModule)
+  },
+  {
+    path: 'add-postal-zip',
+    loadChildren: () => import('./pages/add-postal-zip/add-postal-zip.module').then( m => m.AddPostalZipPageModule)
+  },
 ];
 @NgModule({
   imports: [

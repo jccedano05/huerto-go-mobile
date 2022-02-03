@@ -1,0 +1,21 @@
+ion-card {
+  display: inline-flex;
+  float: left;
+  flex-direction: column;
+  width: 40%;
+  height: 300px;
+  margin: 0% 3% 0% 0%;
+
+  app-card-bar {
+    height: 10vw;
+    overflow: hidden;
+  }
+  app-card-header {
+    height: 50vw;
+    overflow: hidden;
+  }
+  app-card-body {
+    height: 40vw;
+    overflow: hidden;
+  }
+}

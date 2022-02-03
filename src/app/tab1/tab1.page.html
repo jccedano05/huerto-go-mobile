@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div id="searchSection">
+  <app-login-inside-toolbar></app-login-inside-toolbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <!-- Input Search -->
+    <div class="input-container">
+      <ion-row>
+        <ion-col size="12"
+          ><ion-input
+            placeholder="ej. Jitomates, almendras, pilas,crema corporal..."
+            ><ion-icon
+              slot="start"
+              name="search"
+              src="/assets/huertoGo/WEB/005_Inicio/006_Icon_Buscar.svg"
+            ></ion-icon>
+          </ion-input>
+        </ion-col>
+      </ion-row>
+    </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+    <!-- Departments list -->
+
+    <div class="departments">
+      <h1>Departamentos</h1>
+      <ul *ngFor="let department of departmentsList">
+        <li>{{department.name}}</li>
+      </ul>
+      <div class="bottomOptions">
+        <ul>
+          <li>Comidas pre-paparadas</li>
+          <li>Descuentos flash</li>
+          <li>Descuentos</li>
+          <li>Nuevos productos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

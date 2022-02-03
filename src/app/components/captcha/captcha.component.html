@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup" id="captchaAtt">
+  <ngx-recaptcha2
+    #captchaElem
+    [siteKey]="siteKey"
+    formControlName="recaptcha"
+    (reset)="handleReset()"
+    (expire)="handleExpire()"
+    (load)="handleLoad()"
+    (success)="handleSuccess($event)"
+    [useGlobalDomain]="false"
+    [size]="size"
+    [hl]="lang"
+    [theme]="theme"
+    [type]="type"
+  ></ngx-recaptcha2>
+</form>

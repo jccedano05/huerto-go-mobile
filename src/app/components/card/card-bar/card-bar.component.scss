@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  margin-top: 1%;
+
+  ion-label {
+    font-size: 12pt;
+    color: #ff0000;
+    margin-left: 3vw;
+    margin-top: 3%;
+    font-weight: 900;
+  }
+
+  ion-button {
+    --padding-end: 2vw;
+    margin: 0%;
+  }
+  .button-inner {
+    align-items: unset;
+  }
+}

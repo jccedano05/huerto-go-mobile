@@ -1,0 +1,45 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="12">
+      <ion-header no-border>
+        <ion-toolbar class="toolbar">
+          <ion-buttons slot="start">
+            <ion-button color="primary">
+              <ion-icon
+                src="assets/huertoGo/ANDROID/001_Splash/001_Logo.svg"
+                style="width: 109px; height: 51px"
+              ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button color="primary">
+              <ion-icon
+                src="assets/huertoGo/ANDROID/008_Recetas/001_Icon_reloj.svg"
+                style="width: 99px; height: 46px"
+              ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="welcomeSection">
+    <ion-col size="12">
+      <h1 class="welcomeText">¡Bienvenido a <span>HuerTo-Go</span>!</h1>
+    </ion-col>
+    <ion-col size="12">
+      <h1 class="nombreApellido">
+        {{nombre | uppercase}} <br />
+        {{apellido | uppercase}}
+      </h1>
+    </ion-col>
+    <ion-col size="12">
+      <app-button-huerto-go
+        labelInput="Ya puedes iniciar a comprar"
+        color="#57b41b"
+      ></app-button-huerto-go>
+      <hr />
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,39 @@
+ion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7.5vh;
+  position: inherit;
+
+  .logo {
+    height: 100%;
+    background: rgba(172, 255, 172, 0.25);
+
+    img {
+      height: 85%;
+    }
+  }
+
+  .sendTo {
+    height: 200%;
+    display: flex;
+    vertical-align: middle;
+  }
+
+  .cart {
+    height: 100%;
+
+    img {
+      height: 80%;
+    }
+  }
+}
+
+ion-button {
+  text-transform: none !important;
+}
+
+ion-label {
+  font-size: 7.5pt;
+  margin-left: 8px;
+}

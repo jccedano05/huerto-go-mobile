@@ -9,7 +9,7 @@
     height: 40px;
     letter-spacing: 0.5px;
     --padding-start: 20px;
-    --placeholder-color: gray;
+    --placeholder-color: #a5a5a5;
     --placeholder-opacity: 0.8;
     --background: white;
   }
@@ -22,6 +22,10 @@
       font-size: 12px;
       font-weight: 600;
       color: #3e6167;
+
+      .requiredText {
+        color: red;
+      }
     }
   }
 }

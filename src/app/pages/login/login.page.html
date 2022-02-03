@@ -1,14 +1,76 @@
-<app-header></app-header>
+<ion-grid>
+  <ion-row class="div-top">
+    <ion-col size="2">
+      <ion-img
+        src="/assets/huertoGo/ANDROID/002_Ingresa/001_icon_logo.svg"
+        style="width: 71px; height: 114px"
+      ></ion-img>
+    </ion-col>
 
-<ion-content>
-  <div id="header">
-    <h1>Login</h1>
-    <img src="assets/icon/favicon.png" />
-  </div>
+    <ion-col size="1"> </ion-col>
+    <ion-col size="8.5" class="text-separation">
+      <ion-text color="dark">
+        <h2>Hola!</h2>
+        <h3>
+          Si ya estás registrado<br />
+          <strong>Inicia sesión</strong>
+        </h3>
+      </ion-text>
+    </ion-col>
+  </ion-row>
 
-  <form id="form">
-    <app-input placeholder="Email"></app-input>
-    <app-input placeholder="Password" type="password"></app-input>
-    <ion-button expand="block" shape="round"> Login </ion-button>
-  </form>
-</ion-content>
+  <ion-row class="div-middle">
+    <app-input
+      placeholder="ej.soyyo@unacuenta.com"
+      type="text"
+      labelText="Con tu correo electrónico"
+    ></app-input>
+    <app-input
+      placeholder="ej.********"
+      type="password"
+      labelText="Tu contraseña de 8 caracteres"
+    ></app-input>
+    <ion-text color="primary">
+      <h6><u>¿Olvidaste tu contraseña?</u> nosotros te ayudamos</h6>
+    </ion-text>
+    <ion-button
+      expand="block"
+      shape="round"
+      color="57b41b"
+      class="aceptarButton buttons"
+    >
+      Iniciar sesión
+    </ion-button>
+    <ion-text color="primary">
+      <h6 class="text-register">
+        <u>Si aún no cuentas con tu usuario Huerto-GO REGISTRATE</u>
+      </h6>
+    </ion-text>
+  </ion-row>
+
+  <ion-row class="div-bottom">
+    <div class="strike">
+      <span>o</span>
+    </div>
+
+    <ion-text color="primary">
+      <h6 class="text-social-network">
+        Recuerda que también puedes ingresar a nuestra <br />
+        aplicación mediante las siguientes plataformas.
+      </h6>
+    </ion-text>
+    <ion-col size="12">
+      <div class="social-links">
+        <ion-img
+          src="/assets/huertoGo/ANDROID/002_Ingresa/002_btn_Google1.svg"
+          style="width: 54px; height: 44px"
+        ></ion-img>
+        <ion-img
+          src="/assets/huertoGo/ANDROID/002_Ingresa/003_btn_facebook1.svg"
+          style="width: 54px; height: 44px"
+        ></ion-img>
+      </div>
+    </ion-col>
+    <h5>Crear una cuenta más tarde</h5>
+  </ion-row>
+</ion-grid>

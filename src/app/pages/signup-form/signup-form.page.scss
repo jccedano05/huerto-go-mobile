@@ -1,0 +1,46 @@
+app-input {
+  width: 100%;
+}
+app-input-select {
+  width: 100%;
+}
+app-input-select-reactive {
+  width: 100%;
+}
+
+ion-grid {
+  padding: 10% 5% 10% 5%;
+
+  .div-middle {
+    background-color: #f5f9fa;
+  }
+
+  .div-finishAccount {
+    h6 {
+      text-align: center;
+      font-size: 12px;
+
+      a {
+        color: green;
+      }
+    }
+    ion-button {
+      height: 37px;
+      width: 85%;
+      font-size: 17.5px;
+      text-transform: initial;
+      border-radius: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      --box-shadow: none;
+    }
+
+    .buttons {
+      width: 100%;
+    }
+
+    .aceptarButton {
+      background-color: #57b41b !important;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.modalClosed {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0% 5% 5% 5%;
+  align-items: center;
+  font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  .seccion {
+    height: 15%;
+    color: #999999;
+    font-size: 7pt;
+  }
+  .unidad {
+    height: 15%;
+    color: black;
+    font-weight: 900;
+    font-size: 7pt;
+  }
+  .precio {
+    height: 30%;
+    color: black;
+    font-weight: 900;
+    font-size: 10pt;
+  }
+  ion-button {
+    height: 40%;
+    vertical-align: middle;
+  }
+}
+
+.isOpenModal {
+  background: #425f65 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+
+  padding: 0% 1% 5% 1%;
+
+  .addRestProduct {
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    h2 {
+      color: #ffffff !important;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 30px;
+    }
+    ion-button {
+      height: 80%;
+    }
+  }
+
+  .pieceWheight img {
+    max-width: 165% !important;
+  }
+}

@@ -1,0 +1,100 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row class="div-top">
+      <app-input
+        placeholder="ej. Alberto Mario"
+        type="text"
+        labelText="Agrega tu Nombre (s)"
+        required="true"
+      ></app-input>
+      <app-input
+        placeholder="ej. Alhina Paz"
+        type="text"
+        labelText="Tu apellido (s)"
+        required="true"
+      ></app-input>
+      <app-input-select-reactive
+        arrayOption="date"
+        labelText="Fecha de Nacimiento"
+        required="true"
+      ></app-input-select-reactive>
+      <app-input-select
+        arrayOption="gender"
+        labelText="Género (opcional)"
+      ></app-input-select>
+    </ion-row>
+
+    <ion-row class="div-middle">
+      <app-input
+        placeholder="ej.Rio Verde"
+        type="text"
+        labelText="Tu Calle (s)"
+        required="true"
+      ></app-input>
+      <app-input
+        placeholder="ej.Rio Verde"
+        type="text"
+        labelText="Código Postal"
+        required="true"
+      ></app-input>
+      <app-input
+        placeholder="ej. 1515"
+        type="text"
+        labelText="Numero"
+        required="true"
+      ></app-input>
+      <app-input
+        placeholder="ej. Zapopan"
+        type="text"
+        labelText="Municipio"
+        required="true"
+      ></app-input>
+      <app-input-select
+        arrayOption="states"
+        labelText="Estado"
+        placeholder="ej. Jalisco"
+        required="true"
+      ></app-input-select>
+    </ion-row>
+
+    <ion-row class="div-bottom">
+      <app-input
+        placeholder="ej. 1"
+        type="text"
+        labelText="Numero Exterior"
+        required="true"
+      ></app-input>
+      <app-input
+        placeholder="ej. Rio Morado"
+        type="text"
+        labelText="Calle con la que cruza 1"
+      ></app-input>
+      <app-input
+        placeholder="ej. Rio Azul"
+        type="text"
+        labelText="Calle con la que cruza 2"
+      ></app-input>
+    </ion-row>
+    <ion-row class="div-finishAccount">
+      <ion-col size="12">
+        <!-- <app-captcha></app-captcha> -->
+      </ion-col>
+      <ion-col size="12">
+        <h6>
+          Al crear una cuennta
+          <br />
+          estás aceptando los
+          <a src="#"><u>Términos de Servicio y Privacidad.</u></a>
+        </h6>
+      </ion-col>
+      <ion-col size="12">
+        <app-button-huerto-go
+          color="#57b41b"
+          labelInput="Crear cuenta"
+        ></app-button-huerto-go>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
