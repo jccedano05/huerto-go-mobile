@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'add-postal-zip',
     loadChildren: () => import('./pages/add-postal-zip/add-postal-zip.module').then( m => m.AddPostalZipPageModule)
   },
+  {
+    path: 'products-cart-list',
+    loadChildren: () => import('./pages/products-cart-list/products-cart-list.module').then( m => m.ProductsCartListPageModule)
+  },
 ];
 @NgModule({
   imports: [

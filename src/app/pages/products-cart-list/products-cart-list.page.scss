@@ -1,0 +1,81 @@
+.container {
+  background-color: #f4ffef !important;
+}
+ion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7.5vh;
+  position: inherit;
+  vertical-align: middle;
+  align-items: center;
+  margin-top: 5vw;
+  margin-left: 1vw;
+
+  .headerButtons {
+    height: fit-content;
+  }
+
+  h5 {
+    color: #425f66;
+    font-size: 13pt;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0%;
+    font-weight: 700;
+  }
+}
+
+ion-button {
+  text-transform: none !important;
+}
+
+.listProducts {
+  height: 73vh !important;
+  overflow-y: scroll;
+}
+
+//la parte final colocarla con un absolute (inmobile) posicion final abajo
+.totalCart {
+  height: 100%;
+  background-color: white;
+
+  .priceTotal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    h6 {
+      font-size: 9.5pt;
+      text-align: end;
+      margin-left: 5vw;
+      color: #ff9045;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 14pt;
+      margin-right: 5vw;
+    }
+  }
+
+  ion-button {
+    height: 10.5vw;
+    font-size: 13.5pt; //13.5pt
+    text-transform: initial;
+    border-radius: 15px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    --box-shadow: none;
+  }
+
+  .button {
+    width: 90vw;
+    margin-left: 2vw !important;
+  }
+
+  .aceptarButton {
+    background-color: #57b41b !important;
+  }
+}

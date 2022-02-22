@@ -5,10 +5,12 @@ ion-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("/assets/huertoGo/WEB/001_Ingresa/000_Background.png");
+  background-position: -25em;
 
   .img-disp {
     flex: 49%;
-    padding-top: 12%;
+    padding-top: 18%;
   }
   .main-text-disp {
     flex: 49%;
@@ -29,4 +31,11 @@ ion-text {
 .welcome-text-height {
   line-height: 2em;
   padding-bottom: 10%;
+}
+
+.img-fruit-background {
+  position: absolute;
+  left: -10vw !important;
+  top: -15vh;
+  z-index: 0;
 }

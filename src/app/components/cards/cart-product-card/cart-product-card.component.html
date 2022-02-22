@@ -1,0 +1,43 @@
+<div class="productToShop">
+  <div class="startSection">
+    <img [src]="productToShop.imageProduct" />
+  </div>
+  <div class="middleSection">
+    <h4>{{ productToShop.title | uppercase }}</h4>
+    <h5>
+      {{ productToShop.price * productToShop.quantity | currency: "$" }} M.N.
+    </h5>
+    <div class="quantitySelection">
+      <ion-button (click)="onClickMinus()" fill="clear" class="minusButton">
+        <img
+          src="assets/huertoGo/ANDROID/006_Inicio/011_bt_menos.svg"
+          alt="FavButton"
+          class="minus"
+          height="100%"
+        />
+      </ion-button>
+      <h6 class="quantityText">
+        <b>{{ productToShop.quantity | number: ".2" }}</b>
+      </h6>
+      <ion-button (click)="onClickPlus()" fill="clear" class="plusButton">
+        <img
+          src="assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+          alt="FavButton"
+          class="plus"
+          height="100%"
+        />
+      </ion-button>
+      <label>{{ productToShop.unit | lowercase }}</label>
+    </div>
+  </div>
+  <div class="endSection">
+    <h1>{{ productToShop.id }}</h1>
+    <ion-button (click)="onClickDelete()" fill="clear" class="deleteButton">
+      <img
+        src="assets/huertoGo/ANDROID/006_Inicio/014_btn_trash.svg"
+        alt="FavButton"
+        class="delete"
+      />
+    </ion-button>
+  </div>
+</div>

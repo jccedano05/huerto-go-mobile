@@ -17,6 +17,7 @@ import { CardHeaderComponent } from './card/card-header/card-header.component';
 import { CardBodyComponent } from './card/card-body/card-body.component';
 import { LoginInsideToolbarComponent } from './login-inside-toolbar/login-inside-toolbar.component';
 import { SectionListComponent } from './section-list/section-list.component';
+import { CartProductCardComponent } from './cards/cart-product-card/cart-product-card.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SectionListComponent } from './section-list/section-list.component';
     CardHeaderComponent,
     CardBodyComponent,
     LoginInsideToolbarComponent,
-    SectionListComponent
+    SectionListComponent,
+    CartProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +53,8 @@ import { SectionListComponent } from './section-list/section-list.component';
     ButtonHuertoGoComponent,
     CardComponent,
     LoginInsideToolbarComponent,
-    SectionListComponent
+    SectionListComponent,
+    CartProductCardComponent
 
   ]
 })

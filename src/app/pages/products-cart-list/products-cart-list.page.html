@@ -1,0 +1,61 @@
+<div class="container">
+  <ion-header no-border>
+    <ion-button
+      (click)="onClickBack()"
+      fill="clear"
+      class="backButton headerButtons"
+    >
+      <img
+        src="assets/huertoGo/ANDROID/003_Contraseña/001_btn_back1.svg"
+        alt="backButton"
+        class="backLogo"
+        height="24vw"
+      />
+    </ion-button>
+
+    <h5>{{listProductsExample.length}} Productos</h5>
+
+    <ion-button
+      (click)="onClickDelete()"
+      fill="clear"
+      class="deletButton headerButtons"
+    >
+      <img
+        src="assets/huertoGo/ANDROID/006_Inicio/014_btn_trash.svg"
+        alt="deletButton"
+        class="deleteLogo"
+        height="41vw"
+      />
+    </ion-button>
+  </ion-header>
+
+  <div class="listProducts">
+    <div *ngFor="let productToShop of listProductsExample">
+      <app-cart-product-card
+        [productToShop]="productToShop"
+        (deleteProduct)="deleteProduct($event)"
+        (addRestQuantity)="addRestQuantity($event)"
+      ></app-cart-product-card>
+    </div>
+  </div>
+
+  <div class="totalCart">
+    <div class="priceTotal">
+      <h6>
+        Total <br />
+        en tu carrito
+      </h6>
+      <h3><b>${{totalPriceCart | number:".2"}} M.N.</b></h3>
+    </div>
+    <div class="button">
+      <ion-button
+        expand="block"
+        shape="round"
+        color="57b41b"
+        class="aceptarButton"
+      >
+        Pagar
+      </ion-button>
+    </div>
+  </div>
+</div>
