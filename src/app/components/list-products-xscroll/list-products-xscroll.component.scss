@@ -1,0 +1,10 @@
+.listScrollX {
+  max-height: 76vw;
+  overflow-x: scroll;
+  display: flex;
+  background-color: #f4ffef;
+
+  .item {
+    margin-right: 4vw;
+  }
+}

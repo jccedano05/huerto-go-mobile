@@ -1,3 +1,14 @@
-app-section-list {
-  overflow-x: scroll !important;
+.container {
+  background-color: #f4ffef;
+  height: 100%;
+
+  .titleSection {
+    margin: 5.5vw 3vw;
+
+    .titleText {
+      color: #ff5f5f;
+      font-size: 13.5pt;
+      font-weight: 800;
+    }
+  }
 }

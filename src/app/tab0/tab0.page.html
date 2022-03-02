@@ -1,7 +1,19 @@
-<app-login-inside-toolbar></app-login-inside-toolbar>
+<div class="container">
+  <app-login-inside-toolbar></app-login-inside-toolbar>
 
-<h1>LO DE HOY!</h1>
-<app-section-list></app-section-list>
+  <div class="titleSection">
+    <ion-label class="titleText">¡LO DE HOY!</ion-label>
+  </div>
+  <app-list-products-xscroll
+    [listProducts]="listItems"
+    [sectionValue]="'productsStandard'"
+  ></app-list-products-xscroll>
 
-<h1>LO QUE TODOS BUSCAN!</h1>
-<app-section-list></app-section-list>
+  <div class="titleSection">
+    <ion-label class="titleText">¡LO QUE TODOS BUSCAN!</ion-label>
+  </div>
+  <app-list-products-xscroll
+    [listProducts]="listItems"
+    [sectionValue]="'productsStandard'"
+  ></app-list-products-xscroll>
+</div>

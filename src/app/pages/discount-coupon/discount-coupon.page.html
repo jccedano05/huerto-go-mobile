@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="headerBack">
+    <app-header></app-header>
+  </div>
+
+  <div class="bodyDiscountElements">
+    <div class="textInput">
+      <h1>Cupon de descuento</h1>
+      <ion-input
+        type="text"
+        placeholder="ej. ANSINA9887"
+        #inputDiscount
+      ></ion-input>
+      <ion-label *ngIf="incorrectCoupon"
+        >Cupon de descuento incorrecto</ion-label
+      >
+    </div>
+    <div class="buttonAgree">
+      <app-button-huerto-go
+        color="#57B41B"
+        labelInput="Agregar"
+        (click)="onClickAgree(inputDiscount.value)"
+      ></app-button-huerto-go>
+    </div>
+  </div>
+</div>

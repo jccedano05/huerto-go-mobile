@@ -46,6 +46,14 @@ const routes: Routes = [
     path: 'products-cart-list',
     loadChildren: () => import('./pages/products-cart-list/products-cart-list.module').then( m => m.ProductsCartListPageModule)
   },
+  {
+    path: 'search-result-products',
+    loadChildren: () => import('./pages/search-result-products/search-result-products.module').then( m => m.SearchResultProductsPageModule)
+  },
+  {
+    path: 'discount-coupon',
+    loadChildren: () => import('./pages/discount-coupon/discount-coupon.module').then( m => m.DiscountCouponPageModule)
+  },
 ];
 @NgModule({
   imports: [

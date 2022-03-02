@@ -28,6 +28,11 @@ const routes: Routes = [
         loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
       {
+        path: 'search-result-products',
+        // eslint-disable-next-line max-len
+        loadChildren: () => import('../../app/pages/search-result-products/search-result-products.module').then(m => m.SearchResultProductsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab0',
         pathMatch: 'full'

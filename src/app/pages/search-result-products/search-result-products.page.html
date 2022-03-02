@@ -2,7 +2,7 @@
   <div class="header">
     <app-login-inside-toolbar></app-login-inside-toolbar>
     <div class="countItemsAndOrderBy">
-      <ion-label>Más de <span>00</span> productos</ion-label>
+      <ion-label>Más de <span>{{totalProducts}}</span> productos</ion-label>
       <div class="orderBy">
         <ion-label>Ordenalos por:</ion-label>
         <ion-button
@@ -25,15 +25,15 @@
     <!-- Section 1 list scroll X -->
     <div class="section1Scroll">
       <app-list-products-xscroll
-        [listRecipes]="listRecipes"
-        [sectionValue]="'recipesStandard'"
+        [listProducts]="listItemsTop"
+        [sectionValue]="'productsSearched'"
       ></app-list-products-xscroll>
     </div>
     <!-- Section 2 list scroll X -->
     <div class="section2Scroll">
       <app-list-products-xscroll
-        [listRecipes]="listRecipes"
-        [sectionValue]="'recipesStandard'"
+        [listProducts]="listItemsBottom"
+        [sectionValue]="'productsSearched'"
       ></app-list-products-xscroll>
     </div>
   </div>

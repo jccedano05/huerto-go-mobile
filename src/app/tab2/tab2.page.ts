@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../interfaces/Product';
+import { sectionList } from '../test/list-products';
 
 @Component({
   selector: 'app-tab2',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+
+  listRecipes: Product [] = sectionList;
 
   constructor() {}
 

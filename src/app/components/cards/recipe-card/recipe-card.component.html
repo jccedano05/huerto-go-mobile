@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="headerCard">
+    <div class="title">{{ recipe.title }}</div>
+    <div class="favoriteSection">
+      <ion-button (click)="onClick()" fill="clear" size="small">
+        <img
+          *ngIf="!isFavorite; else favoriteExpression"
+          src="/assets/huertoGo/WEB/005_Inicio/008_Btn_Like1.svg"
+          height="100%"
+          alt="FavButton"
+        />
+        <ng-template #favoriteExpression>
+          <img
+            src="/assets/huertoGo/WEB/005_Inicio/009_Btn_Like2.svg"
+            height="100%"
+            alt="FavButton"
+          />
+        </ng-template>
+      </ion-button>
+    </div>
+  </div>
+  <div class="bodyCard">
+    <div class="leftBodyCard"></div>
+    <div class="rightBodyCard"></div>
+  </div>
+  <div class="footerCard"></div>
+</div>

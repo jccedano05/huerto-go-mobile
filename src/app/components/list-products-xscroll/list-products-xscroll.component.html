@@ -1,0 +1,23 @@
+<div class="listScrollX" *ngIf="sectionValue === 'productsStandard'">
+  <app-card
+    *ngFor="let item of listProducts; let i = index"
+    [product]="item"
+    class="item"
+  ></app-card>
+</div>
+
+<div class="listScrollX" *ngIf="sectionValue === 'productsSearched'">
+  <app-card
+    *ngFor="let item of listProducts; let i = index"
+    [product]="item"
+    class="item"
+  ></app-card>
+</div>
+
+<div class="listScrollX" *ngIf="sectionValue === 'recipesStandard'">
+  <app-card
+    *ngFor="let item of listRecipes; let i = index"
+    [product]="item"
+    class="item"
+  ></app-card>
+</div>

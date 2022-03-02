@@ -1,10 +1,10 @@
 ion-card {
   display: inline-flex;
-  float: left;
   flex-direction: column;
-  width: 40%;
-  height: 300px;
+  width: 38vw;
+  height: 76vw;
   margin: 0% 3% 0% 0%;
+  border-radius: 15px;
 
   app-card-bar {
     height: 10vw;

@@ -18,6 +18,8 @@ import { CardBodyComponent } from './card/card-body/card-body.component';
 import { LoginInsideToolbarComponent } from './login-inside-toolbar/login-inside-toolbar.component';
 import { SectionListComponent } from './section-list/section-list.component';
 import { CartProductCardComponent } from './cards/cart-product-card/cart-product-card.component';
+import { ListProductsXscrollComponent } from './list-products-xscroll/list-products-xscroll.component';
+import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { CartProductCardComponent } from './cards/cart-product-card/cart-product
     CardBodyComponent,
     LoginInsideToolbarComponent,
     SectionListComponent,
-    CartProductCardComponent
+    CartProductCardComponent,
+    ListProductsXscrollComponent,
+    RecipeCardComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +58,9 @@ import { CartProductCardComponent } from './cards/cart-product-card/cart-product
     CardComponent,
     LoginInsideToolbarComponent,
     SectionListComponent,
-    CartProductCardComponent
+    CartProductCardComponent,
+    ListProductsXscrollComponent,
+    RecipeCardComponent
 
   ]
 })

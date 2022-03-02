@@ -4,27 +4,38 @@ ion-header {
   justify-content: space-between;
   height: 7.5vh;
   position: inherit;
+  align-items: center;
+  margin-top: 2vw;
 
   .logo {
     height: 100%;
-    background: rgba(172, 255, 172, 0.25);
+    background-image: url("/assets/huertoGo/WEB/003_Registro/000_Blur2-8.png");
+    background-size: 20vw;
+    background-position: -2vw;
+    background-repeat: no-repeat;
 
     img {
-      height: 85%;
+      height: 11.8vw;
     }
   }
 
-  .sendTo {
-    height: 200%;
+  .sendToItems {
     display: flex;
-    vertical-align: middle;
+    flex-direction: row;
+    align-items: center;
+
+    ion-label {
+      color: #8d9c9e;
+      font-size: 8.2pt;
+      font-weight: 600;
+    }
   }
 
   .cart {
     height: 100%;
 
     img {
-      height: 80%;
+      height: 11.5vw;
     }
   }
 }

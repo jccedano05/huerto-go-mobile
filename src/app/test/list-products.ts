@@ -53,5 +53,35 @@ export const sectionList: Product [] = [
         subTitle: 'Fruteria',
         unit: '1 Kg',
         price: 22.30,
+    },
+    {
+        id: 6,
+        discount: 5,
+        // eslint-disable-next-line max-len
+        imageProduct: 'https://thumbs.dreamstime.com/b/fruta-naranja-simple-con-rodajas-aisladas-en-fondo-blanco-fruto-de-%C3%BAnico-169470472.jpg',
+        title: 'Naranja Guatemala',
+        subTitle: 'Fruteria',
+        unit: '1 Kg',
+        price: 27.11,
+    },
+    {
+        id: 7,
+        discount: 7,
+        // eslint-disable-next-line max-len
+        imageProduct: 'https://thumbs.dreamstime.com/b/fruta-naranja-simple-con-rodajas-aisladas-en-fondo-blanco-fruto-de-%C3%BAnico-169470472.jpg',
+        title: 'Naranja Panama',
+        subTitle: 'Fruteria',
+        unit: '1 Kg',
+        price: 12.62,
+    },
+    {
+        id: 8,
+        discount: 3,
+        // eslint-disable-next-line max-len
+        imageProduct: 'https://thumbs.dreamstime.com/b/fruta-naranja-simple-con-rodajas-aisladas-en-fondo-blanco-fruto-de-%C3%BAnico-169470472.jpg',
+        title: 'Naranja Japon',
+        subTitle: 'Fruteria',
+        unit: '1 Kg',
+        price: 19.30,
     }
 ];

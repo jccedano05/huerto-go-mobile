@@ -1,0 +1,47 @@
+.container {
+  background-color: #f4ffef !important;
+  height: 100%;
+
+  .bodyDiscountElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(97vh - 56px); //-56px heigh of header button back
+
+    .textInput h1 {
+      color: #ff9045;
+      font-size: 22pt;
+      text-align: center !important;
+      font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: 700;
+    }
+
+    .textInput ion-input {
+      font-size: 13px;
+      border: none;
+      border-radius: 15px;
+      height: 50px;
+      margin-top: 8vw;
+      margin-bottom: 3vw;
+      width: 90vw;
+      letter-spacing: 0.6px;
+      --padding-start: 8vw;
+      --placeholder-color: #a5a5a5;
+      --placeholder-opacity: 0.9;
+      --background: #ccfdab;
+    }
+
+    .textInput ion-label {
+      color: red;
+      font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 10pt;
+      font-weight: 600;
+      margin-left: 7.5vw;
+    }
+
+    .buttonAgree {
+      width: 88vw;
+    }
+  }
+}
