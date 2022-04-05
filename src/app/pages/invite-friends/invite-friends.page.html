@@ -1,0 +1,68 @@
+<div class="profileContainer">
+  <app-head-bar-profile
+    headName="Invita a un amigo"
+    urlImage="assets/huertoGo/ANDROID/009_Perfil/004_Invita/001_icon_Invita.svg"
+  ></app-head-bar-profile>
+
+  <div class="imageCoupon">
+    <img
+      src="assets/huertoGo/ANDROID/009_Perfil/004_Invita/002_icon_cupon.svg"
+      alt="backButton"
+      class="backLogo"
+      width="55%"
+    />
+  </div>
+
+  <div class="invite">
+    <h4>Invita a tus amigos a probar</h4>
+    <h2>HuerTo-Go</h2>
+  </div>
+
+  <div class="moneyObtain">
+    <h3>Obtendrás $100.00MXN</h3>
+    <h6>Solo comparte el siguiente código</h6>
+  </div>
+
+  <div class="linkCode" (click)="onClickCopyCode()">
+    <h1>ALSIN0956</h1>
+    <h6>Copiar</h6>
+  </div>
+
+  <div class="socialMediaShare">
+    <h6>Comparte en Redes sociales</h6>
+    <div class="socialNetwork">
+      <ion-button
+        (click)="onClickFacebook()"
+        fill="clear"
+        class="headerButtons"
+      >
+        <img
+          src="assets/huertoGo/ANDROID/009_Perfil/004_Invita/003_Btn_Facebook.svg"
+          alt="deletButton"
+          class="deleteLogo"
+          height="45vw"
+        />
+      </ion-button>
+      <ion-button (click)="onClickTwitter()" fill="clear" class="headerButtons">
+        <img
+          src="assets/huertoGo/ANDROID/009_Perfil/004_Invita/004_Btn_Twitter.svg"
+          alt="deletButton"
+          class="deleteLogo"
+          height="45vw"
+        />
+      </ion-button>
+      <ion-button
+        (click)="onClickWhatssap()"
+        fill="clear"
+        class="headerButtons"
+      >
+        <img
+          src="assets/huertoGo/ANDROID/009_Perfil/004_Invita/005_Btn_Whts.svg"
+          alt="deletButton"
+          class="deleteLogo"
+          height="45vw"
+        />
+      </ion-button>
+    </div>
+  </div>
+</div>

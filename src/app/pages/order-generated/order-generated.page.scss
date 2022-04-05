@@ -1,0 +1,57 @@
+.deliveryContainer {
+  background-color: #f4ffef;
+  height: 100%;
+
+  ion-header {
+    margin-top: 2vh;
+    ion-button {
+      height: max-content;
+    }
+  }
+
+  .order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .imageOrder {
+      height: max-content;
+      margin-top: calc(10vh - 30px);
+    }
+
+    .informationOrder {
+      margin-top: 4vh;
+      text-align: center;
+
+      h1 {
+        color: #ff9045;
+        font-size: 28pt;
+        font-weight: 750;
+      }
+      h4 {
+        color: #425f66;
+        font-size: 14.5pt;
+        font-weight: 750;
+        margin-top: 3vh;
+      }
+      h2 {
+        color: #ff9045;
+        font-size: 26pt;
+        font-weight: 750;
+        margin-top: 4.5vh;
+      }
+    }
+
+    .buttonConsult {
+      position: absolute;
+      bottom: calc(15vw - 25px);
+      width: 86%;
+      height: 45px;
+      background-color: #57b41b;
+      color: white;
+      border-radius: 15px;
+      font-size: 15pt;
+      font-weight: 600;
+    }
+  }
+}

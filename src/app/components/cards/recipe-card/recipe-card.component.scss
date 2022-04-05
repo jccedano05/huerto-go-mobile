@@ -4,10 +4,9 @@
   flex-direction: column;
   align-items: center;
   height: 60vw;
-  padding: 3vw 0px 3vw 2vw;
+  padding: 2vw 0px 2vw 2vw;
   width: 38vw;
   border: 1px solid gray;
-  background-color: blue;
 
   .headerCard {
     align-items: center;
@@ -20,6 +19,8 @@
 
     .title {
       width: 70%;
+      font-size: 9.5pt;
+      font-weight: 700;
     }
     .favoriteSection {
       width: 30%;
@@ -33,7 +34,55 @@
   .bodyCard {
     height: 70%;
     width: 100%;
-    background-color: orange;
+    display: flex;
+    flex-direction: row;
+
+    .leftBodyCard {
+      flex: 70vw;
+      background-color: orange;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .description {
+        flex: 20%;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        h5 {
+          padding: 0px;
+          margin: 0px;
+          font-size: 7.5pt;
+          line-height: 1em;
+        }
+      }
+      .productList {
+        flex: 50%;
+        overflow: hidden;
+        margin-top: 0px;
+        padding-top: 0px;
+
+        ul {
+          list-style: none;
+          padding: 0px;
+          width: 100%;
+
+          li {
+            width: 85%;
+          }
+        }
+      }
+      .priceAndGoToRecipe {
+        flex: 30%;
+        overflow: hidden;
+        padding-right: 10vw;
+      }
+    }
+
+    .rightBodyCard {
+      flex: 30vw;
+      background-color: red;
+    }
   }
 
   .footerCard {

@@ -1,0 +1,45 @@
+#profileContainer {
+  background-color: #fffef1;
+  height: 100%;
+
+  .head {
+    margin-top: 6vw;
+    margin-left: 13vw;
+    margin-bottom: 11vw;
+    h3 {
+      color: #ff9045;
+      font-weight: 600;
+      margin-bottom: 1vw;
+    }
+    h1 {
+      color: #425f66;
+      font-size: 20pt;
+      font-weight: 700;
+      margin-top: 0px;
+    }
+  }
+
+  .profileOption {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 10vw;
+    margin-bottom: 3vw;
+
+    width: 100vw;
+    align-items: center;
+
+    img {
+      margin-left: 8vw;
+    }
+    label {
+      margin-left: 4vw;
+      color: #425f66;
+      font-weight: 500;
+    }
+  }
+
+  .profileOption:active {
+    background-color: rgb(248, 248, 247);
+  }
+}

@@ -24,25 +24,31 @@
       placeholder="ej.soyyo@unacuenta.com"
       type="text"
       labelText="Con tu correo electrónico"
+      (inputValue)="emailEvent( $event)"
     ></app-input>
     <app-input
       placeholder="ej.********"
       type="password"
       labelText="Tu contraseña de 8 caracteres"
+      (inputValue)="passwordEvent($event)"
     ></app-input>
     <ion-text color="primary">
-      <h6><u>¿Olvidaste tu contraseña?</u> nosotros te ayudamos</h6>
+      <h6>
+        <u routerLink="/forgot-password">¿Olvidaste tu contraseña?</u>
+        nosotros te ayudamos
+      </h6>
     </ion-text>
     <ion-button
       expand="block"
       shape="round"
       color="57b41b"
       class="aceptarButton buttons"
+      (click)="onClickStartSession(userEmail, userPassword)"
     >
       Iniciar sesión
     </ion-button>
     <ion-text color="primary">
-      <h6 class="text-register">
+      <h6 class="text-register" routerLink="/signup">
         <u>Si aún no cuentas con tu usuario Huerto-GO REGISTRATE</u>
       </h6>
     </ion-text>
@@ -64,10 +70,12 @@
         <ion-img
           src="/assets/huertoGo/ANDROID/002_Ingresa/002_btn_Google1.svg"
           style="width: 54px; height: 44px"
+          (click)="onClickGmail()"
         ></ion-img>
         <ion-img
           src="/assets/huertoGo/ANDROID/002_Ingresa/003_btn_facebook1.svg"
           style="width: 54px; height: 44px"
+          (click)="onClickFacebook()"
         ></ion-img>
       </div>
     </ion-col>

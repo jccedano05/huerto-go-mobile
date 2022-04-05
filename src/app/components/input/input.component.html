@@ -7,6 +7,8 @@
         [placeholder]="placeholder"
         inputmode="email"
         [required]="required"
+        #inputValue
+        (change)="onKeyPress(inputValue.value)"
       ></ion-input>
     </ion-col>
     <ion-col size="12">

@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-button
+    (click)="onClickBack()"
+    fill="clear"
+    class="backButton headerButtons"
+  >
+    <img
+      src="assets/huertoGo/ANDROID/003_Contraseña/001_btn_back1.svg"
+      alt="backButton"
+      class="backLogo"
+      height="27vw"
+    />
+  </ion-button>
+
+  <div class="midSpace">
+    <img [src]="urlImage" alt="deletButton" class="deleteLogo" height="28vw" />
+    <h5>{{ headName }}</h5>
+  </div>
+
+  <ion-button (click)="onClickCart()" fill="clear" class="headerButtons">
+    <img
+      src="assets/huertoGo/ANDROID/006_Inicio/003_btn_carrito1.svg"
+      alt="deletButton"
+      class="deleteLogo"
+      height="45vw"
+    />
+  </ion-button>
+</ion-header>

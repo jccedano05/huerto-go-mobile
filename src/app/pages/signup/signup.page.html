@@ -48,18 +48,21 @@
         type="text"
         labelText="Tu correo electrónico"
         required="true"
+        (inputValue)="emailEvent($event)"
       ></app-input>
       <app-input
-        placeholder="ej.Una23por/"
+        placeholder="ej.Una23por"
         type="password"
         labelText="Contraseña con 8 caracteres Alfanuméricos"
         required="true"
+        (inputValue)="passwordEvent($event)"
       ></app-input>
       <app-input
         placeholder=""
         type="password"
         labelText="Confirmar Contraseña"
         required="true"
+        (inputValue)="passwordConfirmEvent($event)"
       ></app-input>
     </ion-row>
 
@@ -68,12 +71,14 @@
         placeholder="ej. +52 33 - 0000 - 0000"
         type="text"
         labelText="Teléfono *"
+        (inputValue)="telephoneEvent($event)"
       ></app-input>
       <ion-button
         expand="block"
         shape="round"
         color="57b41b"
         class="aceptarButton buttons"
+        (click)="onClickNext(email, password, passwordConfirm, telephone)"
       >
         Siguiente
       </ion-button>

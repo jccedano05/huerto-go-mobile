@@ -1,1 +1,69 @@
-<app-recipe-card [recipe]="recipe"></app-recipe-card>
+<div id="profileContainer">
+  <app-login-inside-toolbar></app-login-inside-toolbar>
+  <div class="head">
+    <h3 class="welcomeText">HOLA</h3>
+    <h1 class="nameText">Alberto Alsina</h1>
+  </div>
+  <div
+    class="profileOption"
+    (click)="optionProfileRequest('misPedidosProfile')"
+  >
+    <img
+      src="/assets/huertoGo/WEB/006_Perfil/001_icon_pedidos2.svg"
+      width="20vw"
+      alt="misPedidosImagen"
+    />
+    <label>Mis pedidos</label>
+  </div>
+  <div class="profileOption" (click)="optionProfileRequest('miPerfilProfile')">
+    <img
+      src="/assets/huertoGo/WEB/006_Perfil/002_icon_perfil2.svg"
+      width="20vw"
+      alt="perfilImagen"
+    />
+    <label>Mi perfil</label>
+  </div>
+  <div
+    class="profileOption"
+    (click)="optionProfileRequest('metodoPagoProfile')"
+  >
+    <img
+      src="/assets/huertoGo/WEB/006_Perfil/003_icon_metodos2.svg"
+      width="20vw"
+      alt="metodoDePagoImagen"
+    />
+    <label>Metodos de pago</label>
+  </div>
+  <div class="profileOption" (click)="optionProfileRequest('invite-friends')">
+    <img
+      src="/assets/huertoGo/WEB/006_Perfil/005_icon_invitar2.svg"
+      width="20vw"
+      alt="invitarImagen"
+    />
+    <label>Invitar a un amigo</label>
+  </div>
+  <div class="profileOption" (click)="optionProfileRequest('ayudaProfile')">
+    <img
+      src="/assets/huertoGo/ANDROID/009_Perfil/000_Inicio/005_Icon_Ayuda.svg"
+      width="17vw"
+      alt="ayudaImagen"
+    />
+    <label>Ayuda</label>
+  </div>
+  <div class="profileOption" (click)="closeSessionRequest()">
+    <img
+      src="/assets/huertoGo/WEB/006_Perfil/006_icon_sesion2.svg"
+      width="17vw"
+      alt="cerrarSesionImagen"
+    />
+    <label>Cerrar sesión</label>
+  </div>
+  <div class="profileOption" (click)="closeAllSessionRequest()">
+    <img
+      src="/assets/huertoGo/ANDROID/009_Perfil/000_Inicio/007_Icon_Sesiones.svg"
+      width="17vw"
+      alt="cerrarTodasSesionesImagen"
+    />
+    <label>Cerrar todas las sesiones</label>
+  </div>
+</div>

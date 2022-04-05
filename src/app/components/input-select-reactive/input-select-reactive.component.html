@@ -5,7 +5,12 @@
 >
   <ion-row class="formGroupDate">
     <ion-col size="3">
-      <ion-select formControlName="yearForm" class="yearInput">
+      <ion-select
+        formControlName="yearForm"
+        class="yearInput"
+        [(ngModel)]="itemSelectedYear"
+        (ionChange)="getItemYear(itemSelectedYear)"
+      >
         <ion-select-option
           *ngFor="let year of years; let i = index"
           value="{{ actualYear - i }}"
@@ -15,7 +20,12 @@
     </ion-col>
 
     <ion-col size="4">
-      <ion-select formControlName="monthsForm" class="monthInput">
+      <ion-select
+        formControlName="monthsForm"
+        class="monthInput"
+        [(ngModel)]="itemSelectedMonth"
+        (ionChange)="getItemMonth(itemSelectedMonth)"
+      >
         <ion-select-option
           *ngFor="let month of months; let i = index"
           value="{{ month.id }}"
@@ -25,7 +35,12 @@
     </ion-col>
 
     <ion-col size="3">
-      <ion-select formControlName="daysForm" class="dayInput">
+      <ion-select
+        formControlName="daysForm"
+        class="dayInput"
+        [(ngModel)]="itemSelectedDay"
+        (ionChange)="getItemDay(itemSelectedDay)"
+      >
         <ion-select-option
           *ngFor="let day of daysArray; let i = index"
           value="{{ i + 1 }}"

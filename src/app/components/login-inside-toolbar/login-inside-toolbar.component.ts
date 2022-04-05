@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login-inside-toolbar',
@@ -7,20 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginInsideToolbarComponent implements OnInit {
 
-  constructor() { }
+  @Input() disabledSendTo;
+
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
 
   onClickLogo(){
-    console.log('Logo');
+    this.navCtrl.navigateForward('/tabs/tab0');
   }
 
   onClickSendTo(){
-    console.log('SendTo');
+    this.navCtrl.navigateBack('back');
   }
 
   onClickCart(){
-    console.log('Cart');
+    this.navCtrl.navigateForward('/products-cart-list');
   }
 
 }

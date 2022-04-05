@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { UserGuard } from './guards/user.guard';
 
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
@@ -40,19 +45,34 @@ const routes: Routes = [
   },
   {
     path: 'add-postal-zip',
-    loadChildren: () => import('./pages/add-postal-zip/add-postal-zip.module').then( m => m.AddPostalZipPageModule)
+    loadChildren: () => import('./pages/add-postal-zip/add-postal-zip.module').then( m => m.AddPostalZipPageModule),
+    canLoad: [UserGuard]
   },
   {
     path: 'products-cart-list',
-    loadChildren: () => import('./pages/products-cart-list/products-cart-list.module').then( m => m.ProductsCartListPageModule)
-  },
-  {
-    path: 'search-result-products',
-    loadChildren: () => import('./pages/search-result-products/search-result-products.module').then( m => m.SearchResultProductsPageModule)
+    loadChildren: () => import('./pages/products-cart-list/products-cart-list.module').then( m => m.ProductsCartListPageModule),
+    canLoad: [UserGuard]
   },
   {
     path: 'discount-coupon',
-    loadChildren: () => import('./pages/discount-coupon/discount-coupon.module').then( m => m.DiscountCouponPageModule)
+    loadChildren: () => import('./pages/discount-coupon/discount-coupon.module').then( m => m.DiscountCouponPageModule),
+    canLoad: [UserGuard]
+  },
+  {
+    path: 'pay-and-order',
+    loadChildren: () => import('./pages/pay-and-order/pay-and-order.module').then( m => m.PayAndOrderPageModule)
+  },
+  {
+    path: 'invite-friends',
+    loadChildren: () => import('./pages/invite-friends/invite-friends.module').then( m => m.InviteFriendsPageModule)
+  },
+  {
+    path: 'order-generated',
+    loadChildren: () => import('./pages/order-generated/order-generated.module').then( m => m.OrderGeneratedPageModule)
+  },
+  {
+    path: 'pay-method',
+    loadChildren: () => import('./pages/pay-method/pay-method.module').then( m => m.PayMethodPageModule)
   },
 ];
 @NgModule({

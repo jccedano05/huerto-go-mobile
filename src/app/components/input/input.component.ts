@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -11,8 +11,17 @@ export class InputComponent {
   @Input() placeholder: string;
   @Input() labelText: string;
   @Input() required: string;
+  @Output() inputValue = new EventEmitter();
+
+
+
+  // document.getElementById('input').nodeValue;
 
   constructor() { }
 
+
+  onKeyPress(value){
+  this.inputValue.emit(value);
+  }
 
 }

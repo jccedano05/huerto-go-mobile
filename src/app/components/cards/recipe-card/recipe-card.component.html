@@ -20,7 +20,21 @@
     </div>
   </div>
   <div class="bodyCard">
-    <div class="leftBodyCard"></div>
+    <div class="leftBodyCard">
+      <div class="description">
+        <h5>{{ recipe.shortDescription }}</h5>
+      </div>
+      <div class="productList">
+        <div class="product">
+          <ul>
+            <li *ngFor="let ingredient of recipe.ingredients; let i = index">
+              {{ ingredient }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="priceAndGoToRecipe"></div>
+    </div>
     <div class="rightBodyCard"></div>
   </div>
   <div class="footerCard"></div>

@@ -7,7 +7,12 @@
     />
   </ion-button>
 
-  <ion-button (click)="onClickSendTo()" fill="clear" class="sentToButton">
+  <ion-button
+    (click)="onClickSendTo()"
+    fill="clear"
+    class="sentToButton"
+    *ngIf="!disabledSendTo"
+  >
     <div class="sendToItems">
       <img
         src="assets/huertoGo/ANDROID/006_Inicio/002_btn_ubicacion1.svg"

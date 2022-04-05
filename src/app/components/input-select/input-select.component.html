@@ -1,7 +1,11 @@
 <div class="input-container">
   <ion-row>
     <ion-col size="12">
-      <ion-select *ngIf="arrayOption === 'gender'">
+      <ion-select
+        *ngIf="arrayOption === 'gender'"
+        [(ngModel)]="itemSelected"
+        (ionChange)="getItem(itemSelected)"
+      >
         <ion-select-option
           *ngFor="let gender of genders; let i = index"
           value="{{ gender.name }}"
@@ -9,7 +13,12 @@
         >
       </ion-select>
 
-      <ion-select *ngIf="arrayOption === 'states'" [placeholder]="placeholder">
+      <ion-select
+        *ngIf="arrayOption === 'states'"
+        [placeholder]="placeholder"
+        [(ngModel)]="itemSelected"
+        (ionChange)="getItem(itemSelected)"
+      >
         <ion-select-option
           *ngFor="let state of states; let i = index"
           value="{{ state.name }}"

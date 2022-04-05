@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -20,6 +20,12 @@ export class InputSelectReactiveComponent implements OnInit {
   @Input() arrayOption;
   @Input() labelText: string;
   @Input() required: string;
+  @Output() inputValue = new EventEmitter();
+
+  itemSelectedYear: string;
+  itemSelectedMonth: string;
+  itemSelectedDay: string;
+  date: string;
 
   myFormNested: FormGroup = this.fb.group({
     daysForm: new FormControl(''),
@@ -93,5 +99,33 @@ export class InputSelectReactiveComponent implements OnInit {
       }
     });
   }
+
+
+  getItemYear(value){
+    this.itemSelectedYear = value;
+    if(this.itemSelectedYear !== undefined && this.itemSelectedMonth !== undefined &&
+      (this.itemSelectedDay !== '' && this.itemSelectedDay !== undefined )){
+
+      this.inputValue.emit(`${this.itemSelectedYear}/${this.itemSelectedMonth}/${this.itemSelectedDay}`);
+    }
+  }
+
+  getItemMonth(value){
+    this.itemSelectedMonth = value;
+    if(this.itemSelectedYear !== undefined && this.itemSelectedMonth !== undefined &&
+      (this.itemSelectedDay !== '' && this.itemSelectedDay !== undefined )){
+
+      this.inputValue.emit(`${this.itemSelectedYear}/${this.itemSelectedMonth}/${this.itemSelectedDay}`);
+  }
+}
+
+  getItemDay(value){
+    this.itemSelectedDay = value;
+    if(this.itemSelectedYear !== undefined && this.itemSelectedMonth !== undefined &&
+                  (this.itemSelectedDay !== '' && this.itemSelectedDay !== undefined )){
+
+      this.inputValue.emit(`${this.itemSelectedYear}/${this.itemSelectedMonth}/${this.itemSelectedDay}`);
+  }
+}
 
 }

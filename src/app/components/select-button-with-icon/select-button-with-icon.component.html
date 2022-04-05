@@ -1,0 +1,109 @@
+<!-- Select Input text color green -->
+<div
+  class="container"
+  *ngIf="typeButtonSelect === 'greenWithDisable' && !isGreenButtonDisabled"
+>
+  <ion-select
+    interface="alert"
+    [(ngModel)]="valueInput"
+    (ionChange)="isValueInputChange(valueInput)"
+    #sectionSelect
+  >
+    <ion-select-option *ngFor="let opt of options" [value]="opt">{{
+      opt
+    }}</ion-select-option>
+  </ion-select>
+
+  <ion-button
+    (click)="activateSelectInput()"
+    class="buttonSelect buttonAttributesGreen"
+  >
+    <div class="buttonContainer">
+      <div class="leftSection">
+        <img slot="start" [src]="srcIcon" height="40%" />
+        <ion-label>{{ valueInput }}</ion-label>
+      </div>
+      <div class="rightSection">
+        <img
+          src="assets/huertoGo/ANDROID/010_Pedido/002_icon_arrow.svg"
+          class="imgArrow"
+        />
+      </div>
+    </div>
+  </ion-button>
+</div>
+
+<ion-button
+  (click)="onClickDisabledButton()"
+  expand="block"
+  fill="clear"
+  shape="round"
+  class="disabledButtonSelectGreen buttonAttributesGreen"
+  *ngIf="isGreenButtonDisabled && typeButtonSelect === 'greenWithDisable'"
+>
+  {{ valueInput }}
+</ion-button>
+
+<!-- Select Input text color black -->
+<div class="container" *ngIf="typeButtonSelect === 'blackWithValueByDefault'">
+  <ion-select
+    interface="alert"
+    [(ngModel)]="valueInput"
+    (ionChange)="isValueInputChange(valueInput)"
+    #sectionSelect
+  >
+    <ion-select-option *ngFor="let opt of options" [value]="opt">{{
+      opt
+    }}</ion-select-option>
+  </ion-select>
+
+  <ion-button
+    (click)="activateSelectInput()"
+    class="buttonSelect buttonAttributesblack"
+  >
+    <div class="buttonContainer">
+      <div class="leftSection">
+        <img slot="start" [src]="srcIcon" height="50%" />
+        <ion-label>{{ valueInput }}</ion-label>
+      </div>
+      <div class="rightSection">
+        <img
+          src="assets/huertoGo/ANDROID/010_Pedido/002_icon_arrow.svg"
+          class="imgArrow"
+        />
+      </div>
+    </div>
+  </ion-button>
+</div>
+
+<!-- Select Input text color black -->
+<div class="container" *ngIf="typeButtonSelect === 'creditOrDebitCard'">
+  <ion-select
+    interface="alert"
+    [(ngModel)]="valueInput"
+    (ionChange)="isValueInputChange(valueInput)"
+    #sectionSelect
+  >
+    <ion-select-option *ngFor="let opt of options" [value]="opt">{{
+      opt
+    }}</ion-select-option>
+  </ion-select>
+
+  <ion-button
+    (click)="activateSelectInput()"
+    class="buttonSelect buttonAtTributesCreditCard"
+  >
+    <div class="buttonContainer">
+      <div class="leftSection">
+        <img slot="start" [src]="srcIcon" height="30%" />
+        <ion-label>{{ valueInput }}</ion-label>
+      </div>
+      <div class="rightSection">
+        <img
+          src="assets/huertoGo/ANDROID/010_Pedido/002_icon_arrow.svg"
+          class="imgArrow"
+        />
+      </div>
+    </div>
+  </ion-button>
+</div>

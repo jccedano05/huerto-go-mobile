@@ -46,11 +46,9 @@ ion-grid {
       height: 40px;
       width: 80%;
       font-size: 17.5px;
-      text-transform: initial;
       border-radius: 15px;
       font-weight: 600;
       letter-spacing: 0.3px;
-      --box-shadow: none;
       margin-top: 10px;
     }
 
@@ -59,7 +57,7 @@ ion-grid {
     }
 
     .aceptarButton {
-      background-color: #57b41b !important;
+      background-color: #57b41b;
     }
 
     .text-register {

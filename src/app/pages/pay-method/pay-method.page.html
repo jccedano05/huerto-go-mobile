@@ -1,0 +1,39 @@
+<div class="payMethodContainer">
+  <app-head-bar-profile
+    headName="Métodos de pago"
+    urlImage="assets/huertoGo/ANDROID/009_Perfil/003_Metodosdepago/001_Icon_Metodo.svg"
+  ></app-head-bar-profile>
+
+  <div class="card">
+    <app-select-button-with-icon
+      initialValue="4545 4545 4545 4545"
+      srcIcon="assets/huertoGo/ANDROID/009_Perfil/003_Metodosdepago/002_Logo_Visa.svg"
+      [options]="['1212 1212 1212 1212','7878 7878 7878 7878', '4545 4545 4545 4545']"
+      (inputSelected)="setCardChoosen($event)"
+      typeButtonSelect="creditOrDebitCard"
+    ></app-select-button-with-icon>
+  </div>
+
+  <h2>Agregar nuevo método de pago</h2>
+
+  <button class="buttonPayMethod">Agrega tarjeta de crédito</button>
+
+  <button class="buttonPayMethod">Pago en OXXO</button>
+
+  <div class="balance">
+    <div class="textImage">
+      <img
+        src="assets/huertoGo/ANDROID/009_Perfil/003_Metodosdepago/003_Icon_Logo.svg"
+        alt="logoImage"
+        class="logoImage"
+        height="30vw"
+      />
+      <h5>Saldo HuerTo-Go</h5>
+    </div>
+    <label>Total - $00.00 MXN</label>
+  </div>
+
+  <label class="linkRef" (click)="onLinkInviteFriend()"
+    ><u>¡Invita a un amigo para conseguir saldo!</u></label
+  >
+</div>

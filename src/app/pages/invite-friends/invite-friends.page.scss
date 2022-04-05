@@ -1,0 +1,105 @@
+.profileContainer {
+  background-color: #fffef1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .imageCoupon {
+    align-self: center;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 76%;
+    border-width: 1px;
+    border-radius: 15%;
+  }
+
+  .invite {
+    margin-top: 5vw;
+    padding: 0% 12vw;
+    h4 {
+      color: #425f66;
+      font-size: 17pt;
+      margin-bottom: 0%;
+    }
+    h2 {
+      color: #ff9045;
+      font-size: 22pt;
+      font-weight: 700;
+      margin-top: 0%;
+    }
+  }
+
+  .moneyObtain {
+    margin-top: 5vw;
+    padding: 0% 12vw;
+    h3 {
+      color: #425f66;
+      font-size: 18pt;
+      font-weight: 700;
+      margin-bottom: 0%;
+    }
+    h6 {
+      color: #8d9c9e;
+      font-size: 13.5pt;
+      margin-top: 0%;
+    }
+  }
+
+  .linkCode {
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 7vw;
+    padding: 2vw 3vw;
+    width: 90vw;
+    align-items: center;
+
+    h1 {
+      color: #57b51a;
+      font-size: 20pt;
+      font-weight: 700;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      margin-left: 5vw;
+    }
+    h6 {
+      color: #57b51a;
+      font-size: 9pt;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      font-weight: 700;
+      margin-right: 5vw;
+    }
+
+    &:active {
+      background-color: rgb(248, 248, 247);
+    }
+  }
+
+  .socialMediaShare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 76vw;
+
+    h6 {
+      color: #8d9c9e;
+      font-size: 12.5pt;
+      font-weight: 500;
+    }
+
+    .socialNetwork {
+      width: 76vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

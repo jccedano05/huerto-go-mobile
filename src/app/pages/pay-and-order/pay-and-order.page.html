@@ -1,0 +1,85 @@
+<div class="container">
+  <app-login-inside-toolbar [disabledSendTo]="true"></app-login-inside-toolbar>
+  <div class="bodyContainer">
+    <div class="orderSection">
+      <div class="title">Tu Pedido</div>
+
+      <!-- Input select Program Delivery-->
+      <app-select-button-with-icon
+        initialValue="Programa tu entrega"
+        srcIcon="assets/huertoGo/ANDROID/010_Pedido/001_icon_reloj1.svg"
+        [options]="['Ahorita','1 Hr mas', '2 Hrs Mas']"
+        (inputSelected)="setProgramDelivery($event)"
+        typeButtonSelect="greenWithDisable"
+      ></app-select-button-with-icon>
+
+      <!-- Input select package -->
+      <app-select-button-with-icon
+        initialValue="Elije empaque para tu pedido"
+        srcIcon="assets/huertoGo/ANDROID/010_Pedido/003_icon_empaque1.svg"
+        [options]="['Empaque No.1','Empaque No.2', 'Empaque No.3']"
+        (inputSelected)="setPackageChoosen($event)"
+        typeButtonSelect="greenWithDisable"
+        *ngIf="isTimeDeliverySelected"
+      ></app-select-button-with-icon>
+
+      <!-- Input select package -->
+      <app-select-button-with-icon
+        initialValue="4545 4545 4545 4545"
+        srcIcon="assets/huertoGo/ANDROID/009_Perfil/003_Metodosdepago/002_Logo_Visa.svg"
+        [options]="['1212 1212 1212 1212','7878 7878 7878 7878', '4545 4545 4545 4545']"
+        (inputSelected)="setCardChoosen($event)"
+        typeButtonSelect="creditOrDebitCard"
+        *ngIf="isPackageSelected"
+      ></app-select-button-with-icon>
+
+      <!-- Map Selection -->
+      <div class="mapSection" *ngIf="isPackageSelected">
+        <img
+          src="https://www.google.com/maps/d/thumbnail?mid=1zcm2nEOiubkoBHLumFGqOg9yPNs&hl=en"
+        />
+      </div>
+
+      <!-- Input Select Adress Selection -->
+      <app-select-button-with-icon
+        initialValue="Rio Verde 2780"
+        srcIcon="assets/huertoGo/ANDROID/010_Pedido/005_icon_direccion.svg"
+        [options]="['Rio Verde 2780','Rio rojo 56']"
+        (inputSelected)="setAdressSelect($event)"
+        typeButtonSelect="blackWithValueByDefault"
+        *ngIf="isPackageSelected"
+      ></app-select-button-with-icon>
+
+      <!-- Input Select Coupon Discount -->
+      <app-select-button-with-icon
+        initialValue="Agregar cupon de descuento"
+        srcIcon="assets/huertoGo/ANDROID/010_Pedido/006_icon_Descuento.svg"
+        [options]="['Cupon 1','Cupon 2']"
+        (inputSelected)="setCouponDiscount($event)"
+        typeButtonSelect="blackWithValueByDefault"
+        *ngIf="isPackageSelected"
+      ></app-select-button-with-icon>
+    </div>
+
+    <!-- Input select delivery time -->
+    <div class="paySection">
+      <div class="priceTotal">
+        <h6>
+          Total <br />
+          en tu carrito
+        </h6>
+        <h3><b>${{2222 | number:".2"}} M.N.</b></h3>
+      </div>
+      <div class="button">
+        <ion-button
+          expand="block"
+          shape="round"
+          color="57b41b"
+          class="aceptarButton"
+        >
+          Pagar y ordenar
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</div>

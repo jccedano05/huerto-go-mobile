@@ -1,0 +1,31 @@
+ion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7.5vh;
+  position: inherit;
+  vertical-align: middle;
+  align-items: center;
+  margin-top: 5vw;
+  margin-left: 1vw;
+  width: 100vw;
+
+  .headerButtons {
+    height: fit-content;
+  }
+
+  .midSpace {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h5 {
+      color: #425f66;
+      font-size: 12.5pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0% 0% 0% 2vw;
+      font-weight: 700;
+    }
+  }
+}

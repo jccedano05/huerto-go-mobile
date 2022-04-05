@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Recipe } from '../interfaces/Recipe';
-import { sectionRecipesList } from '../test/list-recipes';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab4',
@@ -10,8 +9,17 @@ import { sectionRecipesList } from '../test/list-recipes';
 export class Tab4Page {
 
 
-  recipe: Recipe = sectionRecipesList[0];
+  constructor(public navCtrl: NavController) {}
 
-  constructor() {}
+  optionProfileRequest(direction: string){
+    console.log(`redireccion /${direction}`);
+    this.navCtrl.navigateForward(`/${direction}`);
+  }
 
+  closeSessionRequest(){
+    console.log('Cerrar Sesion');
+  }
+  closeAllSessionRequest(){
+    console.log('Cerrar Todas las Sesiones');
+  }
 }

@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
 import { InputSelectComponent } from './input-select/input-select.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { InputSelectReactiveComponent } from './input-select-reactive/input-select-reactive.component';
 import { CaptchaComponent } from './captcha/captcha.component';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
@@ -20,6 +20,8 @@ import { SectionListComponent } from './section-list/section-list.component';
 import { CartProductCardComponent } from './cards/cart-product-card/cart-product-card.component';
 import { ListProductsXscrollComponent } from './list-products-xscroll/list-products-xscroll.component';
 import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
+import { SelectButtonWithIconComponent } from './select-button-with-icon/select-button-with-icon.component';
+import { HeadBarProfileComponent } from './head-bar-profile/head-bar-profile.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
     SectionListComponent,
     CartProductCardComponent,
     ListProductsXscrollComponent,
-    RecipeCardComponent
+    RecipeCardComponent,
+    SelectButtonWithIconComponent,
+    HeadBarProfileComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +50,8 @@ import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
     ReactiveFormsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    FormsModule
   ],
   exports:[
     HeaderComponent,
@@ -60,7 +65,9 @@ import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
     SectionListComponent,
     CartProductCardComponent,
     ListProductsXscrollComponent,
-    RecipeCardComponent
+    RecipeCardComponent,
+    SelectButtonWithIconComponent,
+    HeadBarProfileComponent
 
   ]
 })

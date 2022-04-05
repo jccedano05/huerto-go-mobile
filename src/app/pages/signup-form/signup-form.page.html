@@ -8,21 +8,25 @@
         type="text"
         labelText="Agrega tu Nombre (s)"
         required="true"
+        (inputValue)="nameEvent($event)"
       ></app-input>
       <app-input
         placeholder="ej. Alhina Paz"
         type="text"
         labelText="Tu apellido (s)"
         required="true"
+        (inputValue)="lastNameEvent($event)"
       ></app-input>
       <app-input-select-reactive
         arrayOption="date"
         labelText="Fecha de Nacimiento"
         required="true"
+        (inputValue)="birthdayEvent($event)"
       ></app-input-select-reactive>
       <app-input-select
         arrayOption="gender"
         labelText="Género (opcional)"
+        (inputValue)="genderEvent($event)"
       ></app-input-select>
     </ion-row>
 
@@ -32,30 +36,35 @@
         type="text"
         labelText="Tu Calle (s)"
         required="true"
+        (inputValue)="streetEvent($event)"
       ></app-input>
       <app-input
-        placeholder="ej.Rio Verde"
+        placeholder="ej.45087"
         type="text"
         labelText="Código Postal"
         required="true"
+        (inputValue)="zipCodeEvent($event)"
       ></app-input>
       <app-input
         placeholder="ej. 1515"
         type="text"
         labelText="Numero"
         required="true"
+        (inputValue)="numberStreetEvent($event)"
       ></app-input>
       <app-input
         placeholder="ej. Zapopan"
         type="text"
         labelText="Municipio"
         required="true"
+        (inputValue)="cityEvent($event)"
       ></app-input>
       <app-input-select
         arrayOption="states"
         labelText="Estado"
         placeholder="ej. Jalisco"
         required="true"
+        (inputValue)="stateEvent($event)"
       ></app-input-select>
     </ion-row>
 
@@ -63,18 +72,20 @@
       <app-input
         placeholder="ej. 1"
         type="text"
-        labelText="Numero Exterior"
-        required="true"
+        labelText="Numero Interior"
+        (inputValue)="intNumberEvent($event)"
       ></app-input>
       <app-input
         placeholder="ej. Rio Morado"
         type="text"
         labelText="Calle con la que cruza 1"
+        (inputValue)="crossStreet1Event($event)"
       ></app-input>
       <app-input
         placeholder="ej. Rio Azul"
         type="text"
         labelText="Calle con la que cruza 2"
+        (inputValue)="crossStreet2Event($event)"
       ></app-input>
     </ion-row>
     <ion-row class="div-finishAccount">
@@ -93,6 +104,7 @@
         <app-button-huerto-go
           color="#57b41b"
           labelInput="Crear cuenta"
+          (click)="onClickCreate(names, lastName, date, gender, street, zipCode, numberStreet, city, state, intNumber, crossStreet1, crossStreet2 )"
         ></app-button-huerto-go>
       </ion-col>
     </ion-row>

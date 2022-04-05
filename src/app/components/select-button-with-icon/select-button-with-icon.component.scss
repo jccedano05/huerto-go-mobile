@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  ion-select {
+    display: none;
+  }
+  .buttonSelect {
+    width: 96%;
+    --border-radius: 15px;
+    height: 12vw;
+    --background: white;
+    text-transform: none;
+    .buttonContainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .leftSection {
+        height: 100%;
+        align-items: center;
+        vertical-align: middle;
+        display: flex;
+        flex-direction: row;
+
+        img {
+          margin-right: 3vw;
+        }
+        ion-label {
+          font-weight: 700;
+        }
+      }
+
+      .rightSection {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .imgArrow {
+          width: 3vw;
+        }
+      }
+    }
+  }
+
+  .buttonAttributesGreen {
+    color: #57b51a;
+    ion-label {
+      font-size: 11.5pt;
+    }
+  }
+
+  .buttonAttributesblack {
+    color: #425f66;
+    ion-label {
+      font-size: 9pt;
+    }
+  }
+
+  .buttonAtTributesCreditCard {
+    color: #425f66;
+    ion-label {
+      font-size: 12.5pt;
+    }
+  }
+}
+
+.disabledButtonSelectGreen {
+  width: 96vw;
+  border-radius: 15px;
+  height: 12vw;
+  --color: white;
+  text-transform: none;
+  background-color: #b2d2a0;
+  margin-left: 2vw;
+
+  .buttonAttributesGreen {
+    color: #57b51a;
+    font-size: 11.5pt;
+  }
+}
