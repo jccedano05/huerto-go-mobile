@@ -1,0 +1,57 @@
+.card {
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 25vw;
+  justify-content: center;
+  margin-top: 5vw;
+  padding-left: 10vw;
+  width: 96vw;
+
+  h2 {
+    color: #a5a5a5;
+    font-size: 12.5pt;
+    margin: 0px 0px 8px 0px;
+    padding: 0px;
+  }
+
+  .textLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3px;
+    h3 {
+      color: #425f66;
+      font-size: 8pt;
+      font-weight: 600;
+      margin: 0px 0px 0px 4vw;
+      padding: 0px;
+    }
+  }
+}
+
+button {
+  background-color: #57b41b;
+}
+
+ion-button {
+  height: 40px;
+  width: 85%;
+  font-size: 19px;
+  text-transform: initial;
+  border-radius: 15px;
+  font-weight: 550;
+  letter-spacing: 0.6px;
+  --box-shadow: none;
+  margin-top: 5vw;
+}
+
+.buttons {
+  width: 100%;
+}
+
+.aceptarButton {
+  background-color: #57b41b !important;
+}

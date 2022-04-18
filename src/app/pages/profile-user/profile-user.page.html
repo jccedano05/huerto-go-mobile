@@ -1,0 +1,39 @@
+<div class="profileUserContainer">
+  <app-head-bar-profile
+    headName="Mi perfil"
+    urlImage="assets/huertoGo/ANDROID/009_Perfil/002_Perfil/001_icon_Perfil.svg"
+  ></app-head-bar-profile>
+
+  <select
+    name="select"
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <option value="account">Cuenta</option>
+    <option value="data">Datos personales</option>
+    <option value="direction">Direccion de entrega</option>
+  </select>
+
+  <ion-select
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <ion-select-option value="account">Cuenta</ion-select-option>
+    <ion-select-option value="data">Datos personales</ion-select-option>
+    <ion-select-option value="direction"
+      >Direcciones de entrega</ion-select-option
+    >
+  </ion-select>
+
+  <div class="accountSection" *ngIf="itemSelected === 'account'">
+    <app-account></app-account>
+  </div>
+
+  <div class="dataSection" *ngIf="itemSelected === 'data'">
+    <app-personal-data></app-personal-data>
+  </div>
+
+  <div class="accountSection" *ngIf="itemSelected === 'direction'">
+    <app-address-delivery></app-address-delivery>
+  </div>
+</div>

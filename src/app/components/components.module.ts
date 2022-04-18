@@ -22,6 +22,9 @@ import { ListProductsXscrollComponent } from './list-products-xscroll/list-produ
 import { RecipeCardComponent } from './cards/recipe-card/recipe-card.component';
 import { SelectButtonWithIconComponent } from './select-button-with-icon/select-button-with-icon.component';
 import { HeadBarProfileComponent } from './head-bar-profile/head-bar-profile.component';
+import { AccountComponent } from './profileUser/account/account.component';
+import { AddressDeliveryComponent } from './profileUser/address-delivery/address-delivery.component';
+import { PersonalDataComponent } from './profileUser/personal-data/personal-data.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { HeadBarProfileComponent } from './head-bar-profile/head-bar-profile.com
     ListProductsXscrollComponent,
     RecipeCardComponent,
     SelectButtonWithIconComponent,
-    HeadBarProfileComponent
+    HeadBarProfileComponent,
+    AccountComponent,
+    AddressDeliveryComponent,
+    PersonalDataComponent
   ],
   imports: [
     CommonModule,
@@ -67,7 +73,10 @@ import { HeadBarProfileComponent } from './head-bar-profile/head-bar-profile.com
     ListProductsXscrollComponent,
     RecipeCardComponent,
     SelectButtonWithIconComponent,
-    HeadBarProfileComponent
+    HeadBarProfileComponent,
+    AccountComponent,
+    AddressDeliveryComponent,
+    PersonalDataComponent
 
   ]
 })

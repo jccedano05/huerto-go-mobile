@@ -69,27 +69,22 @@ export class FirebaseService {
       console.log(token);
       // The signed-in user info.
       const user = result.user;
-      console.log('user');
       console.log(user);
-      console.log('-------');
-      console.log('Usuario Logueado Facebook');
 
       uid = user.uid;
       // ...
     }).catch((error) => {
-      // Handle Errors here.
-      // const errorCode = error.code;
+      const errorCode = error.code;
 
-      // console.log(errorCode);
-      // const errorMessage = error.message;
-      // console.log(errorMessage);
-      // // The email of the user's account used.
-      // const email = error.email;
-      // console.log(email);
-      // // The AuthCredential type that was used.
-      // const credential = FacebookAuthProvider.credentialFromError(error);
-      // console.log(credential);
-      // ...
+      console.log(errorCode);
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      // The email of the user's account used.
+      const email = error.email;
+      console.log(email);
+      // The AuthCredential type that was used.
+      const credential = FacebookAuthProvider.credentialFromError(error);
+      console.log(credential);
       });
 
       return uid;

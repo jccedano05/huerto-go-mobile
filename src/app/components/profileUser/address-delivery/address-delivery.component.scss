@@ -1,0 +1,75 @@
+.card {
+  height: 60vw;
+  width: 96vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vw 3vw;
+  margin-top: 5vw;
+
+  .section {
+    h2 {
+      color: #a5a5a5;
+      font-size: 11.5pt;
+      font-weight: 500;
+      margin: 8px 0px 15px 5vw;
+      padding: 0px;
+    }
+
+    hr {
+      border-top: 0.5px solid gray;
+    }
+
+    h3 {
+      color: #425f66;
+      font-size: 11pt;
+      font-weight: 500;
+      margin: 15px 0px 8px 5vw;
+      padding: 0px;
+    }
+  }
+}
+
+ion-button {
+  height: 40px;
+  width: 85%;
+  font-size: 19px;
+  text-transform: initial;
+  border-radius: 15px;
+  font-weight: 550;
+  letter-spacing: 0.6px;
+  --box-shadow: none;
+  margin-top: 5vw;
+
+  .textIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    width: 100%;
+
+    h2 {
+      margin: 0px;
+      font-weight: 550;
+      font-size: 19px;
+    }
+
+    img {
+      margin: 0px 0px 0px 10px;
+    }
+  }
+}
+
+.buttons {
+  width: 100%;
+}
+
+.deleteButton {
+  background-color: #ff9045;
+}
+
+.addNewButton {
+  background-color: #57b41b !important;
+}

@@ -1,0 +1,24 @@
+.profileUserContainer {
+  background-color: #fffef1; //black; //#fffef1
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  height: 100%;
+
+  select {
+    width: 96%;
+    height: 12vw;
+    color: #57b51a;
+    font-size: 15pt;
+    font-weight: 600;
+    margin-top: 3vw;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  ion-select {
+    display: none;
+  }
+}
