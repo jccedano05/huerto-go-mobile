@@ -1,0 +1,37 @@
+<div class="ordersUserContainer">
+  <app-head-bar-profile
+    headName="Mis pedidos"
+    urlImage="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/001_icon_Pedidos.svg"
+  ></app-head-bar-profile>
+
+  <select
+    name="select"
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <option value="actualOrder">En curso</option>
+    <option value="lastOrders">Anteriores</option>
+    <option value="coupons">Cupones</option>
+  </select>
+
+  <ion-select
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <ion-select-option value="actualOrder">En curso</ion-select-option>
+    <ion-select-option value="lastOrders">Anteriores</ion-select-option>
+    <ion-select-option value="coupons">Cupones</ion-select-option>
+  </ion-select>
+
+  <div class="accountSection" *ngIf="itemSelected === 'actualOrder'">
+    <app-actual-order></app-actual-order>
+  </div>
+
+  <div class="dataSection" *ngIf="itemSelected === 'lastOrders'">
+    <app-last-orders></app-last-orders>
+  </div>
+
+  <div class="accountSection" *ngIf="itemSelected === 'coupons'">
+    <app-coupons></app-coupons>
+  </div>
+</div>

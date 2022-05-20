@@ -1,0 +1,68 @@
+.containerHelp {
+  background-color: #fffef1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: #ff9045;
+    font-size: 24pt;
+    font-weight: 650;
+  }
+
+  select {
+    width: 96%;
+    height: 12vw;
+    color: #425f66;
+    font-size: 12pt;
+    font-weight: 650;
+    margin-top: 3vw;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  ion-select {
+    display: none;
+  }
+
+  .sendEmail,
+  .telephone {
+    width: 96%;
+    height: 12vw;
+    background-color: white;
+    color: #425f66;
+    font-size: 12pt;
+    font-weight: 650;
+    margin-top: 3vw;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .telephone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      font-size: 13pt;
+      margin-right: 2vw;
+    }
+
+    h5 {
+      font-size: 10pt;
+      color: #8d9c9e;
+      margin-left: 2vw;
+    }
+  }
+
+  .telephone h4,
+  .sendEmail h4 {
+    color: #425f66;
+    font-weight: 700;
+    font-size: 12pt;
+  }
+}

@@ -1,0 +1,38 @@
+.couponCard {
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  height: 14vw;
+  justify-content: space-between;
+  margin-top: 3vw;
+  width: 96vw;
+
+  .labelImage {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3vw;
+
+    p {
+      color: #425f66;
+      font-size: 9.5pt;
+      font-weight: 700;
+      margin-left: 4vw;
+    }
+  }
+
+  .quantityAndShow {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 3vw;
+
+    h4 {
+      color: #425f66;
+      font-weight: 600;
+      margin-right: 3vw;
+    }
+  }
+}

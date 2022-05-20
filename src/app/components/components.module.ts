@@ -25,6 +25,11 @@ import { HeadBarProfileComponent } from './head-bar-profile/head-bar-profile.com
 import { AccountComponent } from './profileUser/account/account.component';
 import { AddressDeliveryComponent } from './profileUser/address-delivery/address-delivery.component';
 import { PersonalDataComponent } from './profileUser/personal-data/personal-data.component';
+import { LastOrdersComponent } from './last-orders/last-orders.component';
+import { ActualOrderComponent } from './actual-order/actual-order.component';
+import { CouponsComponent } from './coupons/coupons.component';
+import { CouponCardComponent } from './cards/coupon-card/coupon-card.component';
+import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-deliveries-card.component';
 
 
 @NgModule({
@@ -48,7 +53,12 @@ import { PersonalDataComponent } from './profileUser/personal-data/personal-data
     HeadBarProfileComponent,
     AccountComponent,
     AddressDeliveryComponent,
-    PersonalDataComponent
+    PersonalDataComponent,
+    LastOrdersComponent,
+    ActualOrderComponent,
+    CouponsComponent,
+    CouponCardComponent,
+    LastDeliveriesCardComponent
   ],
   imports: [
     CommonModule,
@@ -76,7 +86,10 @@ import { PersonalDataComponent } from './profileUser/personal-data/personal-data
     HeadBarProfileComponent,
     AccountComponent,
     AddressDeliveryComponent,
-    PersonalDataComponent
+    PersonalDataComponent,
+    LastOrdersComponent,
+    ActualOrderComponent,
+    CouponsComponent
 
   ]
 })

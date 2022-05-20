@@ -1,0 +1,6 @@
+<div class="cardsContainer" *ngFor="let coupon of couponsCards">
+  <app-coupon-card
+    couponTypeName="{{ coupon.name }}"
+    quantityCoupons="{{ coupon.quantity }}"
+  ></app-coupon-card>
+</div>

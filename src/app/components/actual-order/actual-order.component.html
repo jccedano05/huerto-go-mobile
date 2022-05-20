@@ -1,0 +1,120 @@
+<div class="actualOrderContainer">
+  <div class="timeToDelivery">
+    <img
+      src="assets/huertoGo/IOS/008_Recetas/001_icon_reloj.svg"
+      height="20vw"
+      alt="Imagen de reloj"
+    />
+    <p>Tiempo estimado de entrega <span>00:00Hr</span></p>
+    <img
+      src="assets/huertoGo/IOS/008_Recetas/001_icon_reloj.svg"
+      height="20vw"
+      alt="Imagen de reloj"
+    />
+  </div>
+
+  <!-- Section of processes -->
+  <div class="imagesProcessesSection">
+    <div class="imagesProcesses">
+      <img
+        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/002_Icon_Procesando{{
+          processingStatus
+        }}.svg"
+        height="30vw"
+        alt="Imagen de reloj"
+      />
+      <img
+        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/003_icon_preparando{{
+          preparingStatus
+        }}.svg"
+        height="30vw"
+        alt="Imagen de reloj"
+      />
+      <img
+        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/004_icon_camino{{
+          onDeliveryStatus
+        }}.svg"
+        height="30vw"
+        alt="Imagen de reloj"
+      />
+      <img
+        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/005_Icon_Entregado{{
+          claimedStatus
+        }}.svg"
+        height="30vw"
+        alt="Imagen de reloj"
+      />
+    </div>
+  </div>
+
+  <!-- Section of Map -->
+
+  <div class="mapSection">
+    <div class="mapSection">
+      <img
+        src="https://www.google.com/maps/d/thumbnail?mid=1zcm2nEOiubkoBHLumFGqOg9yPNs&hl=en"
+        height="250vw"
+        width="380vw"
+      />
+    </div>
+
+    <!-- Section Address -->
+    <div class="adressSection">
+      <div class="adressChoosen">
+        <img
+          src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/006_icon_Entrega.svg"
+          height="29vw"
+          alt="Imagen direccion de entrega"
+        />
+        <p>{{ direction }}</p>
+      </div>
+      <div class="buttonChangeDirection" (click)="onChangeAdress()">
+        <p>Cambiar punto de entrega</p>
+      </div>
+    </div>
+
+    <!-- Section Product Quantity -->
+    <div class="productsSection">
+      <div class="productChoosen">
+        <img
+          src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/007_icon_Productos.svg"
+          height="29vw"
+          alt="Imagen de productos"
+        />
+        <p>({{ quantityProducts }}) Productos</p>
+      </div>
+      <div class="buttonChangeProducts" (click)="onChangeProducts()">
+        <p>Editar pedido antes <span>de 00:00</span></p>
+      </div>
+    </div>
+
+    <!-- Section Product List -->
+    <div class="productsList">
+      <div
+        class="productCard"
+        *ngFor="let product of productList; let i = index"
+      >
+        <div class="leftsideCard">
+          <h3>{{ i + 1 }}</h3>
+          <img [src]="product.image" height="50vw" alt="Imagen de productos" />
+          <div class="dataProduct">
+            <h5>{{ product.name | uppercase }}</h5>
+            <p>
+              {{ product.price | currency: "" }} M.N.
+              <span>({{ product.quantity }} {{ product.unit }})</span>
+            </p>
+          </div>
+        </div>
+        <div class="rightSideCard">
+          <img
+            src="assets/huertoGo/ANDROID/006_Inicio/014_btn_trash.svg"
+            alt="deletButton"
+            class="deleteLogo"
+            height="30vw"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="totalPrice">total</div>
+  </div>
+</div>

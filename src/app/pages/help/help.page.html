@@ -1,0 +1,36 @@
+<section class="containerHelp">
+  <div class="profileContainer">
+    <app-head-bar-profile
+      headName="Ayuda"
+      urlImage="assets/huertoGo/ANDROID/009_Perfil/005_ayuda/001_icon_Ayuda.svg"
+    ></app-head-bar-profile>
+  </div>
+
+  <h1>¿Tienes alguna duda?</h1>
+
+  <select
+    name="select"
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <option value="none">Preguntas frecuentes</option>
+  </select>
+
+  <ion-select
+    [(ngModel)]="itemSelected"
+    (ionChange)="selectOption(itemSelected)"
+  >
+    <ion-select-option value="none">Preguntas frecuentes</ion-select-option>
+  </ion-select>
+
+  <!-- <div class="accountSection" *ngIf="itemSelected === 'account'">
+    <app-account></app-account>
+  </div> -->
+
+  <div class="telephone">
+    <h5>Habla con un asesor</h5>
+    <h4>(000) 000 - 0000</h4>
+  </div>
+
+  <div class="sendEmail"><h4>Envía un correo</h4></div>
+</section>

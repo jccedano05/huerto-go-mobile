@@ -1,0 +1,69 @@
+.lastOrderCard {
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  height: 14vw;
+  justify-content: space-between;
+  margin-top: 3vw;
+  vertical-align: middle;
+  width: 96vw;
+  overflow: hidden;
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2vw;
+
+    .deliveryId {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      margin-left: 3vw;
+      text-align: left;
+
+      h5 {
+        color: #425f66;
+        font-size: 9.5pt;
+        font-weight: 700;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        span {
+          margin-left: 1.8vw;
+        }
+      }
+    }
+
+    .deliveryDate {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      margin-left: 3vw;
+
+      p {
+        color: #425f66;
+        font-size: 8pt;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .rightSide {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 3vw;
+
+    h4 {
+      color: #425f66;
+      font-size: 9.5pt;
+      font-weight: 600;
+      margin-right: 4vw;
+    }
+  }
+}
