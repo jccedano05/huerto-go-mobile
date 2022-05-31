@@ -12,7 +12,7 @@
     />
   </ion-button>
 
-  <div class="midSpace">
+  <div class="midSpace" *ngIf="urlImage !== ''">
     <img [src]="urlImage" alt="deletButton" class="deleteLogo" height="24vw" />
     <h5>{{ headName }}</h5>
   </div>

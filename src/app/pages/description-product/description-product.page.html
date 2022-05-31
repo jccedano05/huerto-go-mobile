@@ -1,0 +1,97 @@
+<div class="descriptionProductContainer">
+  <app-head-bar-profile headName="" urlImage=""></app-head-bar-profile>
+
+  <div class="product">
+    <div class="cardImage">
+      <img
+        [src]="product.imageProduct"
+        height="130vw"
+        alt="Imagen del producto"
+      />
+    </div>
+    <div class="dataProduct">
+      <div class="likeSection">
+        <ion-button (click)="onClickFavorite()" fill="clear" size="small">
+          <img
+            *ngIf="!isFavorite; else favoriteExpression"
+            src="/assets/huertoGo/WEB/005_Inicio/008_Btn_Like1.svg"
+            height="20vw"
+            alt="FavButton"
+          />
+          <ng-template #favoriteExpression>
+            <img
+              src="/assets/huertoGo/WEB/005_Inicio/009_Btn_Like2.svg"
+              height="20vw"
+              alt="FavButton"
+            />
+          </ng-template>
+        </ion-button>
+      </div>
+      <div class="dataSection">
+        <h4>{{ product.title | uppercase}}</h4>
+        <p>{{ product.subTitle }}</p>
+        <h2>{{ product.price | currency:'' }} M.N / 1 {{product.unit}}</h2>
+      </div>
+    </div>
+    <div class="descriptionProduct">
+      <h2>Descripción</h2>
+      <p *ngIf="product.description; else noDescription">
+        {{product.description }}
+      </p>
+      <ng-template #noDescription>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
+          molestias incidunt totam, sed dolor repellendus unde dolore excepturi
+          aliquid, quas, voluptatum in itaque eum veniam adipisci rerum iusto
+          repellat maxime.
+        </p>
+      </ng-template>
+    </div>
+  </div>
+  <div class="addProductSection">
+    <div class="quantitys">
+      <div class="weightSelection">
+        <div class="addRestValue">
+          <div (click)="onClickMinusKg()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/011_bt_menos.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+          <h2>.50</h2>
+          <div (click)="onClickPlusKg()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+        </div>
+
+        <h4>kg</h4>
+      </div>
+      <div class="piecesSelection">
+        <div class="addRestValue">
+          <div (click)="onClickMinusPz()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/011_bt_menos.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+          <h2>01</h2>
+          <div (click)="onClickPlusPz()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+        </div>
+        <h4>pz</h4>
+      </div>
+    </div>
+    <div class="button">boton</div>
+  </div>
+</div>

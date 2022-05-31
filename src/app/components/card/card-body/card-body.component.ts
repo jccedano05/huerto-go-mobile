@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card-body',
@@ -7,19 +9,27 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardBodyComponent implements OnInit {
 
+  @Input() id: string;
   @Input() subtitle: string;
   @Input() unit: string;
   @Input() price: number;
+  @Input() typeCard: string;
 
   isOpenDetailProduct: boolean;
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
 
   onClick(){
 
-    this.isOpenDetailProduct = !this.isOpenDetailProduct;
+    if(this.typeCard === 'search')
+      {
+        console.log(`/description-product/${this.id}`);
+        this.navCtrl.navigateForward(`/description-product/${this.id}`);
+      } else {
+        this.isOpenDetailProduct = !this.isOpenDetailProduct;
+      }
 
   }
 

@@ -1,0 +1,163 @@
+.descriptionProductContainer {
+  align-items: center;
+  background-color: #f3ffee;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  vertical-align: middle;
+  position: relative;
+
+  .product {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+
+    .cardImage {
+      align-items: center;
+      background-color: white;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2vw;
+      height: calc(113px + 15vw);
+      width: 97vw;
+    }
+
+    .dataProduct {
+      background-color: white;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: row;
+      height: 26vw;
+      margin-top: 5vw;
+      padding-top: 3vw;
+      padding-left: 1vw;
+      width: 97vw;
+
+      .likeSection {
+        margin-top: 0.5vw;
+        ion-button {
+          --padding-end: 2vw;
+          margin: 0%;
+        }
+        .button-inner {
+          align-items: unset;
+        }
+      }
+
+      .dataSection {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vw;
+        margin-left: 2vw;
+
+        h4 {
+          color: #425f66;
+          font-size: 8.5pt;
+          font-weight: 700;
+          margin: 0px;
+        }
+
+        p {
+          color: #8d9c9e;
+          font-size: 7pt;
+          margin-top: 1vw;
+          margin-bottom: 1vw;
+        }
+
+        h2 {
+          color: #425f66;
+          font-size: 13pt;
+          font-weight: 700;
+          margin: 0.5vw 0px 0px;
+        }
+      }
+    }
+
+    .descriptionProduct {
+      background-color: white;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      height: 45vw;
+      margin-top: 3vw;
+      padding-top: 5vw;
+      padding-left: 4vw;
+      width: 97vw;
+
+      h2 {
+        color: #ff9045;
+        font-size: 15pt;
+        font-weight: 700;
+        margin: 0px;
+      }
+
+      p {
+        color: #8d9c9e;
+        font-size: 11pt;
+        text-align: justify;
+        margin-right: 4vw;
+      }
+    }
+  }
+
+  .addProductSection {
+    background-color: white;
+    border: 1pt solid black;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 35vw;
+    width: 100vw;
+    position: absolute;
+
+    .quantitys {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 5vw;
+
+      .weightSelection,
+      .piecesSelection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .addRestValue {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          vertical-align: middle;
+          h2 {
+            font-size: 12pt;
+            font-weight: 700;
+            margin: 0px;
+          }
+          div {
+            margin: 0px;
+            padding: 0px;
+            height: 25px;
+
+            img {
+              margin: 0px 18px;
+              padding: 0px;
+              border: 0.5pt solid green;
+              border-radius: 50%;
+
+              &:hover {
+                border: 0.5pt solid greenyellow;
+              }
+            }
+          }
+        }
+
+        h4 {
+          font-size: 11pt;
+          margin: 2.5vw 0px 0px;
+        }
+      }
+    }
+  }
+}

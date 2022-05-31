@@ -5,7 +5,7 @@ import { Recipe } from '../interfaces/Recipe';
 export const sectionRecipesList: Recipe [] = [
 
     {
-        id: 1,
+        id: '1',
         // eslint-disable-next-line max-len
         imageRecipe: 'https://www.pngfind.com/pngs/m/346-3462809_plato-de-comida-png-transparent-background-platos-de.png',
         title: 'Ensalada Mediterranea',

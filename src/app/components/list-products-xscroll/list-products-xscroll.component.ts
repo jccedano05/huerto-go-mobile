@@ -10,6 +10,7 @@ export class ListProductsXscrollComponent implements OnInit {
 
   @Input() listProducts: Product[];
   @Input() listRecipes: Product[];
+  @Input() typeCard: string;
 
   @Input() sectionValue: string;
   constructor() { }

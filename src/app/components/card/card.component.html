@@ -2,8 +2,10 @@
   <app-card-bar [discount]="product.discount"></app-card-bar>
   <app-card-header [title]="product.title"></app-card-header>
   <app-card-body
+    [id]="product.id"
     [subtitle]="product.subTitle"
     [unit]="product.unit"
     [price]="product.price"
+    [typeCard]="typeCard"
   ></app-card-body>
 </ion-card>

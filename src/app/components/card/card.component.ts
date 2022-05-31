@@ -9,6 +9,7 @@ import { Product } from 'src/app/interfaces/Product';
 export class CardComponent implements OnInit {
 
   @Input() product: Product;
+  @Input() typeCard: string;
 
   constructor() { }
 
