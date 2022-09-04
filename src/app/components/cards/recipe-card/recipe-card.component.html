@@ -22,20 +22,45 @@
   <div class="bodyCard">
     <div class="leftBodyCard">
       <div class="description">
-        <h5>{{ recipe.shortDescription }}</h5>
+        <h5>
+          {{
+            recipe.shortDescription.length > 43
+              ? recipe.shortDescription.substring(0, 43).concat("...")
+              : recipe.shortDescription
+          }}
+        </h5>
       </div>
       <div class="productList">
         <div class="product">
           <ul>
             <li *ngFor="let ingredient of recipe.ingredients; let i = index">
-              {{ ingredient }}
+              {{
+                ingredient.length > 14
+                  ? ingredient.substr(0, 15).concat("...")
+                  : ingredient
+              }}
             </li>
           </ul>
         </div>
       </div>
-      <div class="priceAndGoToRecipe"></div>
+      <div class="priceAndGoToRecipe">
+        <p class="totalPrice"><Strong>$85.00 M.N.</Strong></p>
+        <p class="lintToRecipe"><u>Ir a receta</u></p>
+      </div>
     </div>
-    <div class="rightBodyCard"></div>
+    <div class="rightBodyCard">
+      <img
+        src="https://previews.123rf.com/images/subbotina/subbotina1403/subbotina140300033/26390637-ensalada-mediterr%C3%A1nea-ensalada-griega-aislada-en-un-fondo-blanco.jpg"
+      />
+    </div>
   </div>
-  <div class="footerCard"></div>
+  <div class="footerCard">
+    <ion-button (click)="onClick()" fill="clear" size="small">
+      <img
+        src="/assets/huertoGo/ANDROID/006_Inicio/005_btn_agregar1.svg"
+        height="60%"
+        alt="FavButton"
+      />
+    </ion-button>
+  </div>
 </div>

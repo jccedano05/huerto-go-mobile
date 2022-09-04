@@ -1,0 +1,52 @@
+.container {
+  background-color: #f4ffef;
+  height: 100%;
+
+  .header {
+    margin: 3vw 0;
+
+    .countItemsAndOrderBy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px 5vw;
+      align-items: center;
+
+      ion-label {
+        font-size: 9pt;
+        color: #8d9c9e;
+        font-weight: 700;
+        span {
+          color: #425f66;
+          font-weight: 900;
+        }
+      }
+
+      .orderBy {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ion-label {
+          font-size: 11.5pt;
+          color: #425f66;
+          font-weight: 700;
+        }
+
+        .arrowButton {
+          margin-left: 10px;
+          --padding-start: 0px !important;
+          --padding-end: 0px !important;
+        }
+      }
+    }
+  }
+
+  .listItemsContainter {
+    max-height: calc(83vh - 85px);
+    overflow-y: scroll;
+    //   Section list Scroll 2
+    .section2Scroll {
+      margin: 5vw 0 2vw;
+    }
+  }
+}

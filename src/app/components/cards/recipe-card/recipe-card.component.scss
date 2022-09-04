@@ -1,12 +1,13 @@
 .card {
-  border-radius: 15px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vw;
+  height: 65vw;
   padding: 2vw 0px 2vw 2vw;
-  width: 38vw;
-  border: 1px solid gray;
+  width: 43vw;
+  border: none;
+  background-color: white;
 
   .headerCard {
     align-items: center;
@@ -21,11 +22,13 @@
       width: 70%;
       font-size: 9.5pt;
       font-weight: 700;
+      color: #425f66;
     }
     .favoriteSection {
-      width: 30%;
+      width: 16%;
+      margin-left: 2vw;
       ion-button {
-        --padding-start: 0px;
+        --padding-start: 5px;
         --padding-end: 0px;
         margin: 0%;
       }
@@ -38,8 +41,7 @@
     flex-direction: row;
 
     .leftBodyCard {
-      flex: 70vw;
-      background-color: orange;
+      flex: 60%;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -52,14 +54,15 @@
         h5 {
           padding: 0px;
           margin: 0px;
-          font-size: 7.5pt;
+          font-size: 7pt;
+          color: #999999;
           line-height: 1em;
         }
       }
       .productList {
         flex: 50%;
         overflow: hidden;
-        margin-top: 0px;
+        margin-top: -2vw;
         padding-top: 0px;
 
         ul {
@@ -69,25 +72,54 @@
 
           li {
             width: 85%;
+            font-size: 7pt;
+            margin-bottom: 0.7vw;
+            color: #425f66;
+            font-weight: 700;
           }
         }
       }
       .priceAndGoToRecipe {
+        padding-top: 15%;
         flex: 30%;
         overflow: hidden;
-        padding-right: 10vw;
+        padding-right: 8%;
+
+        .totalPrice {
+          font-size: 8pt;
+          padding: 0px;
+          margin: 0px;
+          font-weight: 800;
+        }
+        .lintToRecipe {
+          font-size: 6.5pt;
+          padding: 0px;
+          margin: 1vw 0px 0px;
+          color: #57b51a;
+          font-weight: 800;
+        }
       }
     }
 
     .rightBodyCard {
-      flex: 30vw;
-      background-color: red;
+      flex: 40%;
+      img {
+        height: 100%;
+      }
     }
   }
 
   .footerCard {
-    height: 10%;
+    height: 13%;
     width: 100%;
-    background-color: green;
+    display: flex;
+    justify-content: center;
+
+    ion-button {
+      --padding-start: 0px;
+      --padding-end: 0px;
+      margin-top: -3vw;
+      height: 150%;
+    }
   }
 }

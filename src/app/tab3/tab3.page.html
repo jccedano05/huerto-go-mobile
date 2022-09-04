@@ -1,1 +1,40 @@
-<app-recipe-card [recipe]="recipe"></app-recipe-card>
+<div class="container">
+  <div class="header">
+    <app-login-inside-toolbar></app-login-inside-toolbar>
+    <div class="countItemsAndOrderBy">
+      <ion-label>Más de <span>00</span> productos</ion-label>
+      <div class="orderBy">
+        <ion-label>Ordenalos por:</ion-label>
+        <ion-button
+          (click)="onClickOrderBy()"
+          fill="clear"
+          class="arrowButton headerButtons"
+        >
+          <img
+            src="assets/huertoGo/WEB/006_Perfil/013_btn_arrow1.svg"
+            alt="Arrow Button"
+            class="arrowLogo"
+            height="13vw"
+          />
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="listItemsContainter">
+    <!-- Section 1 list scroll X -->
+    <div class="section1Scroll">
+      <app-list-products-xscroll
+        [listProducts]="listItems"
+        [sectionValue]="'productsStandard'"
+      ></app-list-products-xscroll>
+    </div>
+    <!-- Section 2 list scroll X -->
+    <div class="section2Scroll">
+      <app-list-products-xscroll
+        [listRecipes]="listRecipes"
+        [sectionValue]="'recipesStandard'"
+      ></app-list-products-xscroll>
+    </div>
+  </div>
+</div>

@@ -17,9 +17,9 @@
 </div>
 
 <div class="listScrollX" *ngIf="sectionValue === 'recipesStandard'">
-  <app-card
+  <app-recipe-card
     *ngFor="let item of listRecipes; let i = index"
-    [product]="item"
+    [recipe]="item"
     class="item"
-  ></app-card>
+  ></app-recipe-card>
 </div>
