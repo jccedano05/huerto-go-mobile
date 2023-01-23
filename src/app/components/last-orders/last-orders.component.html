@@ -1,8 +1,8 @@
-<div class="cardsContainer" *ngFor="let deliveryItem of deliveries">
-  <app-last-deliveries-card
-    [deliveryId]="deliveryItem.deliveryId"
-    [dateDDMMYY]="deliveryItem.dateDDMMYY"
-    [timeHHMM]="deliveryItem.timeHHMM"
-    [totalPrice]="deliveryItem.totalPrice"
-  ></app-last-deliveries-card>
+<div class="lastOrderContainer">
+  <div *ngFor="let deliveryDate of deliveries">
+    <app-last-orders-group-cards
+      [date]="deliveryDate.date"
+      [deliveries]="deliveryDate.deliveries"
+    ></app-last-orders-group-cards>
+  </div>
 </div>

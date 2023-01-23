@@ -9,61 +9,59 @@ import { FirebaseService } from '../../services/firebase.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
   userEmail: string;
   userPassword: string;
 
-  constructor(public navCtrl: NavController, private userService: UserService, private alertController: AlertController,
-    private firebaseService: FirebaseService) { }
+  constructor(
+    public navCtrl: NavController,
+    private userService: UserService,
+    private alertController: AlertController,
+    private firebaseService: FirebaseService
+  ) {}
 
+  ngOnInit() {}
 
-  ngOnInit(){}
-
-
-  emailEvent( email){
+  emailEvent(email) {
     this.userEmail = email;
   }
 
-  passwordEvent( password){
+  passwordEvent(password) {
     this.userPassword = password;
   }
 
-
-  async onClickStartSession(email, password){
-
+  async onClickStartSession(email, password) {
     try {
       const user = await this.firebaseService.login(email, password);
       await this.userService.setTokenLogin(user.user.uid);
       this.navCtrl.navigateRoot('/tabs/tab0');
     } catch (error) {
-    this.presentAlert();
+      this.presentAlert();
     }
   }
 
+  async onClickGmail() {
+    try {
+      const user = await this.firebaseService.loginWithGmail();
+      console.log({ user });
+      // await this.userService.setTokenLogin(user.user.uid);
+      // this.navCtrl.navigateRoot('/tabs/tab0');
+    } catch (error) {
+      this.presentAlert();
+    }
+  }
 
   async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Error al ingresar',
       message: 'Usuario y/o Contraseña no validos',
-      buttons: ['OK']
+      buttons: ['OK'],
     });
 
     await alert.present();
   }
 
-
-   onClickGmail(){
-     try {
-     const user = this.firebaseService.loginWithGmail();
-     console.log(user);
-     } catch (error) {
-      this.presentAlert();
-     }
-  }
-
-  async onClickFacebook(){
+  async onClickFacebook() {
     this.firebaseService.loginWithFacebook();
   }
-
 }

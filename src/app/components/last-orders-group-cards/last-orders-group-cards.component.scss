@@ -1,0 +1,36 @@
+.titleContainerPastDeliveries {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3vw;
+  width: 96vw;
+
+  .orderConainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 7vw;
+    width: 90vw;
+
+    ion-text {
+      font-weight: 600;
+      font-size: 13pt;
+      color: #425f66;
+    }
+    img {
+      margin-left: 2vw;
+      height: 15px;
+    }
+  }
+
+  .deliveryGroupTitle {
+    width: 100%;
+    text-align: end;
+
+    ion-text {
+      font-weight: 600;
+      font-size: 13pt;
+    }
+  }
+}

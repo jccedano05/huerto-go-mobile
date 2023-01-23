@@ -30,7 +30,8 @@ import { ActualOrderComponent } from './actual-order/actual-order.component';
 import { CouponsComponent } from './coupons/coupons.component';
 import { CouponCardComponent } from './cards/coupon-card/coupon-card.component';
 import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-deliveries-card.component';
-
+import { LastOrdersGroupCardsComponent } from './last-orders-group-cards/last-orders-group-cards.component';
+import { StatusDeliveryOrderComponent } from './statusDeliveryOrder/status-delivery-order/status-delivery-order.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,9 @@ import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-d
     ActualOrderComponent,
     CouponsComponent,
     CouponCardComponent,
-    LastDeliveriesCardComponent
+    LastDeliveriesCardComponent,
+    LastOrdersGroupCardsComponent,
+    StatusDeliveryOrderComponent,
   ],
   imports: [
     CommonModule,
@@ -67,9 +70,9 @@ import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-d
     RecaptchaModule,
     RecaptchaFormsModule,
     NgxCaptchaModule,
-    FormsModule
+    FormsModule,
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     InputComponent,
     InputSelectComponent,
@@ -89,8 +92,9 @@ import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-d
     PersonalDataComponent,
     LastOrdersComponent,
     ActualOrderComponent,
-    CouponsComponent
-
-  ]
+    CouponsComponent,
+    LastOrdersGroupCardsComponent,
+    StatusDeliveryOrderComponent,
+  ],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

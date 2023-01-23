@@ -1,7 +1,6 @@
 .actualOrderContainer {
   align-items: center;
   background-color: white;
-  border: 1pt black solid;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -16,14 +15,21 @@
     display: flex;
     flex-direction: row;
     height: 7vw;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 3vw;
     margin-right: 5vw;
     text-align: right;
     width: 100%;
 
+    img {
+      margin-right: 2vw;
+    }
+    img:last-of-type {
+      margin-left: 7vw;
+    }
     p {
       color: #8d9c9e;
+      font-size: 8pt;
 
       span {
         color: #425f66;
@@ -46,7 +52,7 @@
   }
 
   .mapSection {
-    margin-top: 4vw;
+    margin-top: 1vw;
   }
 
   .adressSection {
@@ -112,7 +118,7 @@
     .buttonChangeProducts {
       margin-right: 3vw;
       p {
-        color: #8d9c9e;
+        color: #dadada;
         font-size: 7pt;
 
         span {
@@ -175,6 +181,30 @@
 
     .rightSideCard {
       margin-right: 5vw;
+    }
+  }
+
+  .totalPriceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
+
+    .textTotal {
+      margin-left: 6vw;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #425f66;
+    }
+
+    .priceTotal {
+      margin-right: 2vw;
+      font-size: 12pt;
+      font-weight: 800;
+      color: black;
     }
   }
 }

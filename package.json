@@ -38,6 +38,7 @@
     "axios": "^0.27.2",
     "cordova-sqlite-storage": "^6.0.0",
     "firebase": "^9.6.7",
+    "moment": "^2.29.4",
     "ng-recaptcha": "^9.0.0",
     "ngx-captcha": "^10.0.0",
     "ngx-cookie-service": "^14.0.1",

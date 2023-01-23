@@ -1,11 +1,11 @@
-<div class="actualOrderContainer">
+<ion-card class="actualOrderContainer">
   <div class="timeToDelivery">
     <img
       src="assets/huertoGo/IOS/008_Recetas/001_icon_reloj.svg"
       height="20vw"
       alt="Imagen de reloj"
     />
-    <p>Tiempo estimado de entrega <span>00:00Hr</span></p>
+    <p>Tiempo estimado de entrega <span>00:00 Hr</span></p>
     <img
       src="assets/huertoGo/IOS/008_Recetas/001_icon_reloj.svg"
       height="20vw"
@@ -16,34 +16,34 @@
   <!-- Section of processes -->
   <div class="imagesProcessesSection">
     <div class="imagesProcesses">
-      <img
-        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/002_Icon_Procesando{{
+      <app-status-delivery-order
+        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/002_Icon_Procesando{{
           processingStatus
         }}.svg"
-        height="30vw"
-        alt="Imagen de reloj"
-      />
-      <img
-        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/003_icon_preparando{{
+        statusName="Procesando"
+        status="done"
+      ></app-status-delivery-order>
+      <app-status-delivery-order
+        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/003_icon_preparando{{
           preparingStatus
         }}.svg"
-        height="30vw"
-        alt="Imagen de reloj"
-      />
-      <img
-        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/004_icon_camino{{
+        statusName="Preparando"
+        status="inProgress"
+      ></app-status-delivery-order>
+      <app-status-delivery-order
+        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/004_icon_camino{{
           onDeliveryStatus
         }}.svg"
-        height="30vw"
-        alt="Imagen de reloj"
-      />
-      <img
-        src="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/005_Icon_Entregado{{
+        statusName="En Camino"
+        status="notYet"
+      ></app-status-delivery-order>
+      <app-status-delivery-order
+        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/005_Icon_Entregado{{
           claimedStatus
         }}.svg"
-        height="30vw"
-        alt="Imagen de reloj"
-      />
+        statusName="Entregado"
+        status="notYet"
+      ></app-status-delivery-order>
     </div>
   </div>
 
@@ -100,7 +100,7 @@
           <div class="dataProduct">
             <h5>{{ product.name | uppercase }}</h5>
             <p>
-              {{ product.price | currency: "" }} M.N.
+              {{ product.price | currency : "" }} M.N.
               <span>({{ product.quantity }} {{ product.unit }})</span>
             </p>
           </div>
@@ -115,6 +115,10 @@
         </div>
       </div>
     </div>
-    <div class="totalPrice">total</div>
   </div>
-</div>
+
+  <div class="totalPriceContainer">
+    <ion-text class="textTotal">TOTAL DEL PEDIDO</ion-text>
+    <ion-text class="priceTotal">$16.30 M.N.</ion-text>
+  </div>
+</ion-card>

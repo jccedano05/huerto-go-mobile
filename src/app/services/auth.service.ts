@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import axios from 'axios';
 import axiosCall from 'utils/axiosCall';
 import { AxiosResponse } from '../interfaces/Auth.interface';
 import { User } from '../interfaces/User';

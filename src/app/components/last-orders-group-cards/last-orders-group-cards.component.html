@@ -1,0 +1,20 @@
+<div class="titleContainerPastDeliveries">
+  <div class="orderConainer" *ngIf="date === 'Hoy'">
+    <ion-text>Ordenalos por:</ion-text>
+    <img
+      src="assets/huertoGo/ANDROID/009_Perfil/002_Perfil/002_Btn_Arrow.svg"
+      height="10vw"
+    />
+  </div>
+  <div class="deliveryGroupTitle">
+    <ion-text>{{ date }}</ion-text>
+  </div>
+</div>
+<div class="cardsContainer" *ngFor="let deliveryItem of deliveries">
+  <app-last-deliveries-card
+    [deliveryId]="deliveryItem.deliveryId"
+    [dateDDMMYY]="deliveryItem.dateDDMMYY"
+    [timeHHMM]="deliveryItem.timeHHMM"
+    [totalPrice]="deliveryItem.totalPrice"
+  ></app-last-deliveries-card>
+</div>

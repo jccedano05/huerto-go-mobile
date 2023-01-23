@@ -6,19 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.page.scss'],
 })
 export class OrdersPage implements OnInit {
-
   itemSelected: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-
     this.itemSelected = 'actualOrder';
-
   }
 
-  selectOption(optionSelected: any ){
-    console.log(optionSelected);
+  selectOption(optionSelected: any) {
+    // console.log(optionSelected);
   }
-
 }

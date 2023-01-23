@@ -3,12 +3,28 @@
   height: 100%;
 
   .titleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 5.5vw 3vw;
 
     .titleText {
       color: #ff5f5f;
-      font-size: 13.5pt;
-      font-weight: 800;
+      font-size: 17pt;
+      font-weight: 600;
+    }
+
+    .titleButton {
+      height: 18px;
+      font-size: 8pt;
+      font-weight: 600;
+    }
+    ion-button {
+      --background: #57ae14;
+      --background-hover: #b2ea86;
+      --background-activated: #b2ea86;
+      --background-focused: #377707;
     }
   }
 }
