@@ -1,0 +1,115 @@
+<div class="descriptionProductContainer">
+  <app-head-bar-profile headName="" urlImage=""></app-head-bar-profile>
+
+  <div class="productContainer">
+    <div class="product">
+      <ion-card class="cardImage">
+        <img
+          [src]="recipe.imageRecipe"
+          height="150vw"
+          alt="Imagen del producto"
+        />
+      </ion-card>
+      <div class="timeOfPreparation">
+        <div class="textIconPreparationContainer">
+          <ion-text color="primary">
+            Tiempo de preparación aprox. - {{recipe.timeToReady}}</ion-text
+          >
+          <img
+            src="assets/huertoGo/IOS/008_Recetas/001_icon_reloj.svg"
+            height="20vw"
+            alt="Imagen de reloj"
+          />
+        </div>
+      </div>
+      <div class="descriptionProduct">
+        <div class="dataProduct">
+          <div class="likeSection">
+            <ion-button (click)="onClickFavorite()" fill="clear" size="small">
+              <img
+                *ngIf="!isFavorite; else favoriteExpression"
+                src="/assets/huertoGo/WEB/005_Inicio/008_Btn_Like1.svg"
+                height="20vw"
+                alt="FavButton"
+              />
+              <ng-template #favoriteExpression>
+                <img
+                  src="/assets/huertoGo/WEB/005_Inicio/009_Btn_Like2.svg"
+                  height="20vw"
+                  alt="FavButton"
+                />
+              </ng-template>
+            </ion-button>
+          </div>
+          <div class="dataSection">
+            <h4>{{ recipe.title }}</h4>
+          </div>
+        </div>
+        <h2>Descripción</h2>
+        <p *ngIf="recipe.fullDescription; else noDescription">
+          {{recipe.fullDescription }}
+        </p>
+        <ng-template #noDescription>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
+            molestias incidunt totam, sed dolor repellendus unde dolore
+            excepturi aliquid, quas, voluptatum in itaque eum veniam adipisci
+            rerum iusto repellat maxime.m, sed dolor repellendus unde dolore
+            excepturi aliquid, quas, voluptatum in itaque eum veniam adipisci
+            rerum iusto repellat maxime.
+          </p>
+        </ng-template>
+      </div>
+
+      <div class="descriptionProduct">
+        <h2>Ingredientes</h2>
+        <ul *ngIf="recipe.fullDescription; else noDescription">
+          <li *ngFor="let ingredient of recipe.ingredients">{{ingredient }}</li>
+        </ul>
+        <ng-template #noDescription>
+          <p>No hay datos de ingredientes disponible actualmente</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <ion-card class="addProductSection">
+    <div class="quantitys">
+      <div class="weightSelection">
+        <div class="addRestValue">
+          <!-- <div (click)="onClickMinusKg()" fill="clear"> -->
+          <div (click)="substactDish()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/011_bt_menos.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+          <h2>{{numberOfDishes}}</h2>
+          <div (click)="addDish()" fill="clear">
+            <img
+              src="/assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+              height="110%"
+              alt="FavButton"
+            />
+          </div>
+        </div>
+
+        <h4>Porciones</h4>
+      </div>
+      <div class="piecesSelection">
+        <h3>$ 00.00 MXN</h3>
+        <h4>Total</h4>
+      </div>
+    </div>
+    <div class="buttonContainer">
+      <ion-button
+        expand="block"
+        shape="round"
+        color="57b41b"
+        class="aceptarButton buttons"
+      >
+        Agregar
+      </ion-button>
+    </div>
+  </ion-card>
+</div>

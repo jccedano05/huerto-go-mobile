@@ -22,19 +22,17 @@
   </div>
 
   <div class="listItemsContainter">
-    <!-- Section 1 list scroll X -->
-    <div class="section1Scroll">
-      <app-list-products-xscroll
-        [listRecipes]="listRecipes"
-        [sectionValue]="'recipesStandard'"
-      ></app-list-products-xscroll>
-    </div>
-    <!-- Section 2 list scroll X -->
+    <!-- Section 1 list Recipes scroll X -->
     <div class="section2Scroll">
-      <app-list-products-xscroll
+      <app-list-recipes-xscroll
         [listRecipes]="listRecipes"
-        [sectionValue]="'recipesStandard'"
-      ></app-list-products-xscroll>
+      ></app-list-recipes-xscroll>
+    </div>
+    <!-- Section 2 list Recipes scroll X -->
+    <div class="section2Scroll">
+      <app-list-recipes-xscroll
+        [listRecipes]="listRecipes"
+      ></app-list-recipes-xscroll>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="card">
+<ion-card class="card">
   <div class="headerCard">
     <div class="title">{{ recipe.title }}</div>
     <div class="favoriteSection">
@@ -35,9 +35,11 @@
           <ul>
             <li *ngFor="let ingredient of recipe.ingredients; let i = index">
               {{
-                ingredient.length > 14
-                  ? ingredient.substr(0, 15).concat("...")
-                  : ingredient
+                i < 5
+                  ? ingredient.length > 12
+                    ? ingredient.substr(0, 13).concat("...")
+                    : ingredient
+                  : ""
               }}
             </li>
           </ul>
@@ -55,7 +57,7 @@
     </div>
   </div>
   <div class="footerCard">
-    <ion-button (click)="onClick()" fill="clear" size="small">
+    <ion-button (click)="onButtonPlus()" fill="clear" size="small">
       <img
         src="/assets/huertoGo/ANDROID/006_Inicio/005_btn_agregar1.svg"
         height="60%"
@@ -63,4 +65,4 @@
       />
     </ion-button>
   </div>
-</div>
+</ion-card>

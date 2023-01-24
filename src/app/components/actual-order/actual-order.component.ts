@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IStatus } from 'src/app/interfaces/profile/IDeliveries';
+import { statusOfOrder } from 'src/app/test/statusOfOrder';
 
 interface ProductCardData {
   name: string;
@@ -16,15 +18,14 @@ interface ProductCardData {
 export class ActualOrderComponent implements OnInit {
   direction: string;
 
-  processingStatus: string;
-  preparingStatus: string;
-  onDeliveryStatus: string;
-  claimedStatus: string;
+  statusProps: string[];
 
   counter: number;
   quantityProducts: string;
 
   productList: ProductCardData[];
+
+  statusOrderArray: IStatus[] = statusOfOrder;
 
   constructor() {}
 
@@ -34,42 +35,6 @@ export class ActualOrderComponent implements OnInit {
     this.counter = 8;
 
     this.quantityProducts = '00';
-
-    this.processingStatus = '3';
-    this.preparingStatus = '2';
-    this.onDeliveryStatus = '1';
-    this.claimedStatus = '1';
-
-    // if(this.counter <= 3){
-    //   this.processingStatus = String(this.counter);
-    // }
-    // else if(this.counter <= 6){
-    //   this.processingStatus = '3';
-    //   if(this.counter % 3 !== 0){
-    //     this.preparingStatus = String(this.counter % 3);
-    //   } else{
-    //     this.preparingStatus = '3';
-    //   }
-    // }
-    // else if(this.counter <= 9){
-    //   this.processingStatus = '3';
-    //   this.preparingStatus = '3';
-    //   if(this.counter % 3 !== 0){
-    //     this.onDeliveryStatus = String(this.counter % 3);
-    //   } else{
-    //     this.onDeliveryStatus = '3';
-    //   }
-    // }
-    // else if(this.counter <= 12){
-    //   this.processingStatus = '3';
-    //   this.preparingStatus = '3';
-    //   this.onDeliveryStatus = '3';
-    //   if(this.counter % 3 !== 0){
-    //     this.claimedStatus = String(this.counter % 3);
-    //   } else{
-    //     this.claimedStatus = '3';
-    //   }
-    // }
 
     this.productList = [
       {

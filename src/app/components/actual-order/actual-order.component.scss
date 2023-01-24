@@ -40,15 +40,10 @@
 
   .imagesProcessesSection {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 5vw;
     width: 100%;
-
-    .imagesProcesses {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
+    justify-content: space-around;
   }
 
   .mapSection {
@@ -118,7 +113,7 @@
     .buttonChangeProducts {
       margin-right: 3vw;
       p {
-        color: #dadada;
+        color: #8d9c9e;
         font-size: 7pt;
 
         span {
@@ -184,6 +179,14 @@
     }
   }
 
+  hr {
+    height: 1px;
+    border-bottom: none;
+    width: 96%;
+    border-width: 1px;
+    border-color: #fbfbfb;
+    // box-sizing: content-box;
+  }
   .totalPriceContainer {
     display: flex;
     flex-direction: row;

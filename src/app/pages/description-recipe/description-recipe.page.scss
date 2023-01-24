@@ -13,6 +13,7 @@
     overflow-y: scroll;
     height: calc(98vh - 50vw);
     .product {
+      margin-top: 2vw;
       align-items: center;
       display: flex;
       flex-direction: column;
@@ -30,53 +31,23 @@
         width: 97vw;
       }
 
-      .dataProduct {
-        background-color: white;
-        border-radius: 25px;
+      .timeOfPreparation {
+        width: 96vw;
         display: flex;
-        flex-direction: row;
-        height: 26vw;
-        margin-top: 5vw;
-        padding-top: 3vw;
-        padding-left: 1vw;
-        width: 97vw;
-
-        .likeSection {
-          margin-top: 0.5vw;
-          ion-button {
-            --padding-end: 2vw;
-            margin: 0%;
-          }
-          .button-inner {
-            align-items: unset;
-          }
-        }
-
-        .dataSection {
+        justify-content: end;
+        margin-right: 5vw;
+        .textIconPreparationContainer {
           display: flex;
-          flex-direction: column;
-          margin-top: 2vw;
-          margin-left: 2vw;
+          flex-direction: row;
+          align-items: center;
 
-          h4 {
+          ion-text {
             color: #425f66;
-            font-size: 8.5pt;
+            font-size: 8pt;
             font-weight: 700;
-            margin: 0px;
           }
-
-          p {
-            color: #8d9c9e;
-            font-size: 7pt;
-            margin-top: 1vw;
-            margin-bottom: 1vw;
-          }
-
-          h2 {
-            color: #425f66;
-            font-size: 13pt;
-            font-weight: 700;
-            margin: 0.5vw 0px 0px;
+          img {
+            margin-left: 5px;
           }
         }
       }
@@ -93,6 +64,29 @@
         padding-left: 4vw;
         width: 97vw;
 
+        .dataProduct {
+          background-color: white;
+          border-radius: 25px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 1vw;
+          margin-bottom: 5vw;
+          margin-left: -3vw;
+          width: 97vw;
+
+          .likeSection {
+            margin-top: 0.5vw;
+            ion-button {
+              --padding-end: 2vw;
+              margin: 0%;
+            }
+            .button-inner {
+              align-items: unset;
+            }
+          }
+        }
+
         h2 {
           color: #ff9045;
           font-size: 15pt;
@@ -105,6 +99,14 @@
           font-size: 11pt;
           text-align: justify;
           margin-right: 4vw;
+        }
+
+        ul {
+          padding-left: 5vw;
+
+          li {
+            color: #8d9c9e;
+          }
         }
       }
     }
@@ -124,6 +126,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       margin-top: 5vw;
 
       .weightSelection,
@@ -139,6 +142,7 @@
           h2 {
             font-size: 12pt;
             font-weight: 700;
+            color: black;
             margin: 0px;
           }
           div {
@@ -159,6 +163,11 @@
           }
         }
 
+        h3 {
+          font-size: 12pt;
+          color: black;
+          font-weight: 700;
+        }
         h4 {
           font-size: 11pt;
           margin: 2.5vw 0px 0px;

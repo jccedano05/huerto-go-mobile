@@ -1,0 +1,7 @@
+<div class="listScrollX">
+  <app-recipe-card
+    *ngFor="let item of listRecipes; let i = index"
+    [recipe]="item"
+    class="item"
+  ></app-recipe-card>
+</div>

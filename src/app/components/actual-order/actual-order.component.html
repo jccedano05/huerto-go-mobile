@@ -15,36 +15,11 @@
 
   <!-- Section of processes -->
   <div class="imagesProcessesSection">
-    <div class="imagesProcesses">
-      <app-status-delivery-order
-        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/002_Icon_Procesando{{
-          processingStatus
-        }}.svg"
-        statusName="Procesando"
-        status="done"
-      ></app-status-delivery-order>
-      <app-status-delivery-order
-        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/003_icon_preparando{{
-          preparingStatus
-        }}.svg"
-        statusName="Preparando"
-        status="inProgress"
-      ></app-status-delivery-order>
-      <app-status-delivery-order
-        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/004_icon_camino{{
-          onDeliveryStatus
-        }}.svg"
-        statusName="En Camino"
-        status="notYet"
-      ></app-status-delivery-order>
-      <app-status-delivery-order
-        imageUrl="assets/huertoGo/ANDROID/009_Perfil/001_Mispedidos/005_Icon_Entregado{{
-          claimedStatus
-        }}.svg"
-        statusName="Entregado"
-        status="notYet"
-      ></app-status-delivery-order>
-    </div>
+    <app-status-delivery-order
+      *ngFor="let status of statusOrderArray"
+      [statusName]="status.statusName"
+      [status]="status.status"
+    ></app-status-delivery-order>
   </div>
 
   <!-- Section of Map -->
@@ -116,6 +91,7 @@
       </div>
     </div>
   </div>
+  <hr />
 
   <div class="totalPriceContainer">
     <ion-text class="textTotal">TOTAL DEL PEDIDO</ion-text>

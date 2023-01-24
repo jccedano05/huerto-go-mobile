@@ -32,6 +32,7 @@ import { CouponCardComponent } from './cards/coupon-card/coupon-card.component';
 import { LastDeliveriesCardComponent } from './cards/last-deliveries-card/last-deliveries-card.component';
 import { LastOrdersGroupCardsComponent } from './last-orders-group-cards/last-orders-group-cards.component';
 import { StatusDeliveryOrderComponent } from './statusDeliveryOrder/status-delivery-order/status-delivery-order.component';
+import { ListRecipesXscrollComponent } from './list-recipes-xscroll/list-recipes-xscroll.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { StatusDeliveryOrderComponent } from './statusDeliveryOrder/status-deliv
     LastDeliveriesCardComponent,
     LastOrdersGroupCardsComponent,
     StatusDeliveryOrderComponent,
+    ListRecipesXscrollComponent,
   ],
   imports: [
     CommonModule,
@@ -95,6 +97,7 @@ import { StatusDeliveryOrderComponent } from './statusDeliveryOrder/status-deliv
     CouponsComponent,
     LastOrdersGroupCardsComponent,
     StatusDeliveryOrderComponent,
+    ListRecipesXscrollComponent,
   ],
 })
 export class ComponentsModule {}
