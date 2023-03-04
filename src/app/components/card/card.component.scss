@@ -1,21 +1,30 @@
-ion-card {
-  display: inline-flex;
-  flex-direction: column;
+.containerCard {
+  // background-color: red;
   width: 38vw;
   height: 76vw;
-  margin: 0% 3% 0% 0%;
+  padding: 1vw;
   border-radius: 15px;
+  background-image: url("/assets/huertoGo/WEB/003_Registro/000_Blur2-8.png");
+  ion-card {
+    margin: 2%;
+    display: inline-flex;
+    flex-direction: column;
+    width: 36vw;
+    height: 74vw;
+    margin: 0% 3% 0% 0%;
+    border-radius: 15px;
 
-  app-card-bar {
-    height: 10vw;
-    overflow: hidden;
-  }
-  app-card-header {
-    height: 50vw;
-    overflow: hidden;
-  }
-  app-card-body {
-    height: 40vw;
-    overflow: hidden;
+    app-card-bar {
+      height: 10vw;
+      overflow: hidden;
+    }
+    app-card-header {
+      height: 50vw;
+      overflow: hidden;
+    }
+    app-card-body {
+      height: 40vw;
+      overflow: hidden;
+    }
   }
 }

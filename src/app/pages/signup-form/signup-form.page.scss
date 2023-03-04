@@ -13,6 +13,17 @@ ion-grid {
 
   .div-middle {
     background-color: #f5f9fa;
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-bottom: 3%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+
+    app-input,
+    app-input-select {
+      margin-left: 5%;
+      width: 90%;
+    }
   }
 
   .div-finishAccount {

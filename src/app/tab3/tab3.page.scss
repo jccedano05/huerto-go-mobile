@@ -44,6 +44,9 @@
   .listItemsContainter {
     max-height: calc(83vh - 85px);
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     //   Section list Scroll 2
     .section2Scroll {
       margin: 5vw 0 2vw;

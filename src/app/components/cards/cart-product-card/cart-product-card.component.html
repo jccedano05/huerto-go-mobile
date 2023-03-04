@@ -5,7 +5,7 @@
   <div class="middleSection">
     <h4>{{ productToShop.title | uppercase }}</h4>
     <h5>
-      {{ productToShop.price * productToShop.quantity | currency: "$" }} M.N.
+      {{ productToShop.price * productToShop.quantity | currency : "$" }} M.N.
     </h5>
     <div class="quantitySelection">
       <ion-button (click)="onClickMinus()" fill="clear" class="minusButton">
@@ -17,11 +17,11 @@
         />
       </ion-button>
       <h6 class="quantityText">
-        <b>{{ productToShop.quantity | number: ".2" }}</b>
+        <b>{{ productToShop.quantity | number : ".2" }}</b>
       </h6>
       <ion-button (click)="onClickPlus()" fill="clear" class="plusButton">
         <img
-          src="assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
+          src="/assets/huertoGo/ANDROID/006_Inicio/012_btn_mas.svg"
           alt="FavButton"
           class="plus"
           height="100%"

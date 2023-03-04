@@ -39,6 +39,9 @@ ion-icon {
   font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100%;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   h1 {
     color: #ff9045;
@@ -73,7 +76,7 @@ ion-icon {
   margin-left: -6vw;
 
   li {
-    margin-bottom: 1vw;
+    margin-bottom: 1.5vw;
     margin-left: 6vw;
   }
 }
