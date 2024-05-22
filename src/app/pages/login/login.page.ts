@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
       const user = await this.firebaseService.loginWithGmail();
       console.log({ user });
       // await this.userService.setTokenLogin(user.user.uid);
-      // this.navCtrl.navigateRoot('/tabs/tab0');
+      this.navCtrl.navigateRoot('/tabs/tab0');
     } catch (error) {
       this.presentAlert();
     }

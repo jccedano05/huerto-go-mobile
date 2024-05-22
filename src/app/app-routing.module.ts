@@ -65,7 +65,7 @@ const routes: Routes = [
       import('./pages/add-postal-zip/add-postal-zip.module').then(
         (m) => m.AddPostalZipPageModule
       ),
-    canLoad: [UserGuard],
+    // canLoad: [UserGuard],
   },
   {
     path: 'products-cart-list',
@@ -73,7 +73,7 @@ const routes: Routes = [
       import('./pages/products-cart-list/products-cart-list.module').then(
         (m) => m.ProductsCartListPageModule
       ),
-    canLoad: [UserGuard],
+    // canLoad: [UserGuard],
   },
   {
     path: 'discount-coupon',
@@ -81,7 +81,7 @@ const routes: Routes = [
       import('./pages/discount-coupon/discount-coupon.module').then(
         (m) => m.DiscountCouponPageModule
       ),
-    canLoad: [UserGuard],
+    // canLoad: [UserGuard],
   },
   {
     path: 'pay-and-order',

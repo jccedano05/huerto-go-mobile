@@ -10,47 +10,55 @@ const routes: Routes = [
     children: [
       {
         path: 'tab0',
-        loadChildren: () => import('../tab0/tab0.module').then(m => m.Tab0PageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import('../tab0/tab0.module').then((m) => m.Tab0PageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import('../tab1/tab1.module').then((m) => m.Tab1PageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import('../tab3/tab3.module').then((m) => m.Tab3PageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: 'tab4',
-        loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import('../tab4/tab4.module').then((m) => m.Tab4PageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: 'search-result-products',
         // eslint-disable-next-line max-len
-        loadChildren: () => import('../../app/pages/search-result-products/search-result-products.module').then(m => m.SearchResultProductsPageModule),
-        canLoad: [UserGuard]
+        loadChildren: () =>
+          import(
+            '../../app/pages/search-result-products/search-result-products.module'
+          ).then((m) => m.SearchResultProductsPageModule),
+        // canLoad: [UserGuard]
       },
       {
         path: '',
         redirectTo: '/tabs/tab0',
-        pathMatch: 'full'
-      }
-    ]
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '',
     redirectTo: '/tabs/tab0',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

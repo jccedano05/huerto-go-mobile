@@ -6,33 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discount-coupon.page.scss'],
 })
 export class DiscountCouponPage implements OnInit {
-
   incorrectCoupon = false;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // ------------ Fix Here.!! --------
   //buscar en la base de datos de cupones
-  isCouponExist(coupon: string){
-    if(coupon === 'Majo1997'){ // ????
+  isCouponExist(coupon: string) {
+    if (coupon === 'Majo1997') {
+      // ????
       return true;
     }
     return false;
   }
 
-  onClickAgree(value){
-    if(this.isCouponExist(value)){
+  onClickAgree(value) {
+    if (this.isCouponExist(value)) {
       this.incorrectCoupon = false;
-      }
-    else {
+    } else {
       this.incorrectCoupon = true;
     }
-    if(!this.incorrectCoupon){
+    if (!this.incorrectCoupon) {
       //What i need to do if its correct
       //console.log('se agrego el cupon correctamente');
     }
   }
-
 }
